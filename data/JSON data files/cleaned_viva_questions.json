@@ -1,0 +1,402 @@
+[
+  {
+    "ID":1,
+    "Topic":"Architecture",
+    "Difficulty":"Easy",
+    "Question":"Why did you choose your specific tech stack over alternatives?",
+    "Model Answer":"The response must justify the language or framework selection based on performance, ecosystem libraries, developer familiarity, or fast prototyping capability while highlighting at least one key constraint of a discarded alternative tech stack.",
+    "Keywords":"selection criteria, technical justification, framework comparison, runtime environment, development constraint"
+  },
+  {
+    "ID":2,
+    "Topic":"Architecture",
+    "Difficulty":"Medium",
+    "Question":"How does your architecture support scalability?",
+    "Model Answer":"The student should explain how the application architecture handles user or dataset growth, explicitly referencing methods like load balancing, horizontal scaling, caching strategies, asynchronous task processing, or decoupled service components.",
+    "Keywords":"horizontal scaling, bottleneck mitigation, caching mechanisms, resource management, throughput capacity"
+  },
+  {
+    "ID":3,
+    "Topic":"Architecture",
+    "Difficulty":"Hard",
+    "Question":"What architectural trade-offs were made?",
+    "Model Answer":"The student must contrast two competing engineering properties\u2014such as prioritizing application execution speed over heavy security validation, or data consistency over high availability\u2014and clearly explain why that compromise was necessary.",
+    "Keywords":"prioritisation, strategic compromise, design constraint, architectural limitation, performance trade-off"
+  },
+  {
+    "ID":4,
+    "Topic":"Architecture",
+    "Difficulty":"Easy",
+    "Question":"How is modularity achieved in the system?",
+    "Model Answer":"The user should explain how the project code layout separates distinct functional duties into independent layers or files, ensuring that modifying one module or function does not cause system-wide bugs.",
+    "Keywords":"separation of concerns, loose coupling, component isolation, code abstraction, independent modules"
+  },
+  {
+    "ID":5,
+    "Topic":"Architecture",
+    "Difficulty":"Medium",
+    "Question":"How does data flow through the application?",
+    "Model Answer":"The answer must trace a clear chronological data journey from the initial frontend user action, through the processing layers, backend routing or evaluation endpoints, and final database state updates.",
+    "Keywords":"data lifecycle, request routing, processing sequence, execution pipeline, data persistence"
+  },
+  {
+    "ID":6,
+    "Topic":"Architecture",
+    "Difficulty":"Hard",
+    "Question":"What design patterns were used and why?",
+    "Model Answer":"The response must name a recognized software design pattern implemented in the codebase\u2014such as Model-View-Controller, Singleton, Factory, or Observer\u2014and explain the structural problem it was selected to resolve.",
+    "Keywords":"architectural design patterns, software structure, code maintainability, structural solution, object creation"
+  },
+  {
+    "ID":7,
+    "Topic":"Architecture",
+    "Difficulty":"Easy",
+    "Question":"How does the architecture handle failures?",
+    "Model Answer":"The response should describe how the application prevents complete crashes when runtime errors occur, explicitly referencing try-except error catching blocks, fallback routines, or graceful failure handling alerts.",
+    "Keywords":"exception handling, fault tolerance, graceful degradation, fallback logic, system crash mitigation"
+  },
+  {
+    "ID":8,
+    "Topic":"Architecture",
+    "Difficulty":"Medium",
+    "Question":"How would the system support 10x user growth?",
+    "Model Answer":"The user must detail an operational scaling blueprint for heavy traffic, mentioning cloud infrastructure adjustments, database query connection pooling, load distribution balancing, or horizontal resource replication.",
+    "Keywords":"cloud vertical scaling, infrastructure deployment, query latency, connection pool, distributed loads"
+  },
+  {
+    "ID":9,
+    "Topic":"Architecture",
+    "Difficulty":"Hard",
+    "Question":"What are the major architectural components?",
+    "Model Answer":"The answer must break down the system macro-architecture, explaining the exact technical responsibilities and integration hooks connecting the client interface, server backend engine, and storage layer.",
+    "Keywords":"three-tier architecture, component communication, infrastructure stack, integration interface, subsystem layers"
+  },
+  {
+    "ID":10,
+    "Topic":"Architecture",
+    "Difficulty":"Easy",
+    "Question":"How is maintainability ensured?",
+    "Model Answer":"The response should detail software engineering practices applied to keep the system clean, referencing descriptive object naming conventions, structural code comments, documentation standards, and clean variable definitions.",
+    "Keywords":"codebase readability, programming standards, code refactoring, self-documenting code, standard patterns"
+  },
+  {
+    "ID":11,
+    "Topic":"Architecture",
+    "Difficulty":"Medium",
+    "Question":"How would you redesign the system for enterprise use?",
+    "Model Answer":"The user should outline modifications needed to scale the app to an enterprise level, focusing on microservices architecture migration, data encryption pipelines, authorization protocols, or high-availability deployments.",
+    "Keywords":"enterprise migration, distributed services, encryption layers, access controls, multi-tenant database"
+  },
+  {
+    "ID":12,
+    "Topic":"Architecture",
+    "Difficulty":"Hard",
+    "Question":"What are the main performance bottlenecks?",
+    "Model Answer":"The student must identify the primary computing resource constraint of the application\u2014such as network network delay, blocking database queries, or CPU-bound AI processing routines\u2014and suggest optimization steps.",
+    "Keywords":"execution latency, system processing constraint, thread optimization, profile evaluation, runtime blocks"
+  },
+  {
+    "ID":13,
+    "Topic":"Database",
+    "Difficulty":"Easy",
+    "Question":"Why was this database selected?",
+    "Model Answer":"The answer must explicitly validate choosing a relational SQL engine or non-relational NoSQL system by matching data characteristics (such as strict relational schemas or unstructured flexible documents) to the app requirements.",
+    "Keywords":"relational vs non-relational, data engine characteristics, schema requirements, database evaluation, querying efficiency"
+  },
+  {
+    "ID":14,
+    "Topic":"Database",
+    "Difficulty":"Medium",
+    "Question":"How is the schema designed?",
+    "Model Answer":"The user should describe the structural arrangement of database collection fields or database row items, identifying critical attributes, unique item identification keys, and structural object boundaries.",
+    "Keywords":"attribute configuration, entity data structure, table configuration, identification keys, structural parameters"
+  },
+  {
+    "ID":15,
+    "Topic":"Database",
+    "Difficulty":"Hard",
+    "Question":"How is normalization applied?",
+    "Model Answer":"The answer must demonstrate how database redundancy was minimized, referencing specific structural normalization milestones\u2014such as eliminating multi-valued attributes, functional dependencies, or relational join anomalies.",
+    "Keywords":"normalization form execution, structural data redundancy, structural dependency mitigation, entity relational schema, transaction anomaly prevention"
+  },
+  {
+    "ID":16,
+    "Topic":"Database",
+    "Difficulty":"Easy",
+    "Question":"How is data integrity maintained?",
+    "Model Answer":"The response must detail mechanisms used to prevent corrupt data entry into records, explicitly mentioning data type input validations, database primary key tracking rules, or required value constraints.",
+    "Keywords":"constraints configuration, input format validation, relational mapping consistency, verification checks, data type enforcement"
+  },
+  {
+    "ID":17,
+    "Topic":"Database",
+    "Difficulty":"Medium",
+    "Question":"What indexing strategy is used?",
+    "Model Answer":"The student must explain how database search speeds were enhanced, naming specific lookup columns (like primary keys or foreign keys) that received indexes to prevent slow, full-table scans.",
+    "Keywords":"lookup index, querying acceleration, table scanning mitigation, database index selection, data retrieval optimization"
+  },
+  {
+    "ID":18,
+    "Topic":"Database",
+    "Difficulty":"Hard",
+    "Question":"How are transactions handled?",
+    "Model Answer":"The response must explain database execution security, referencing how atomic transaction commands commit successfully as a single complete block or roll back safely during unforeseen script crashes.",
+    "Keywords":"connection commit, rollback sequence, concurrent processing safeguards, transaction state isolation, write operation logging"
+  },
+  {
+    "ID":19,
+    "Topic":"Database",
+    "Difficulty":"Easy",
+    "Question":"How are slow queries optimized?",
+    "Model Answer":"The answer should highlight data parsing fixes, referencing query structure cleanups, removing redundant database lookups, or writing specialized filter conditions to reduce severe CPU load.",
+    "Keywords":"code optimization, query analysis, execution bottleneck mitigation, filtering efficiency, dataset constraints"
+  },
+  {
+    "ID":20,
+    "Topic":"Database",
+    "Difficulty":"Medium",
+    "Question":"What backup strategy is followed?",
+    "Model Answer":"The response should describe system recovery rules, specifying regular intervals for data backup exports, local or cloud archive storage strategies, and methods to safely restore files after accidental losses.",
+    "Keywords":"recovery script, scheduled data exports, remote storage repositories, archive synchronization, data restoration validation"
+  },
+  {
+    "ID":21,
+    "Topic":"Database",
+    "Difficulty":"Hard",
+    "Question":"How are migrations managed?",
+    "Model Answer":"The student must outline how structural data changes are handled, detailing version-controlled update files, column alteration tracking scripts, and strategies to update live system structures without wiping out existing records.",
+    "Keywords":"schema updates, operational continuous tracking, deployment scripts, data preservation patterns, automated version configuration"
+  },
+  {
+    "ID":22,
+    "Topic":"Database",
+    "Difficulty":"Easy",
+    "Question":"How would you handle large-scale data growth?",
+    "Model Answer":"The answer should describe data expansion solutions, referencing database table dividing strategies, horizontally distributed lookup clusters, or routing less important older data rows into cheaper cold storage files.",
+    "Keywords":"table segmentation, storage balancing, data distribution frameworks, cold archiving, operational database partitioning"
+  },
+  {
+    "ID":23,
+    "Topic":"Testing",
+    "Difficulty":"Medium",
+    "Question":"What testing strategy was followed?",
+    "Model Answer":"The student should explain their universal quality check pipeline, describing the workflow progress from checking individual custom functions to verifying integrated frontend and backend operations.",
+    "Keywords":"quality control roadmap, validation tracking, bug isolation framework, verification milestones, code lifecycle checking"
+  },
+  {
+    "ID":24,
+    "Topic":"Testing",
+    "Difficulty":"Hard",
+    "Question":"What testing types were performed?",
+    "Model Answer":"The answer must break down distinct software checking methodologies used, referencing isolated component validations, end-to-end user path simulation checks, or functional edge-case boundary inspections.",
+    "Keywords":"structural module checking, user flow verification, API validation layers, functional edge evaluations, comprehensive code testing"
+  },
+  {
+    "ID":25,
+    "Topic":"Testing",
+    "Difficulty":"Easy",
+    "Question":"How were requirements validated?",
+    "Model Answer":"The student should describe how they verified that the final software platform meets user objectives, checking project code features against the original project guidelines or rubric metrics.",
+    "Keywords":"system feature matching, client rubric mapping, objective verification checks, output criteria validation, functional validation"
+  },
+  {
+    "ID":26,
+    "Topic":"Testing",
+    "Difficulty":"Medium",
+    "Question":"How were edge cases tested?",
+    "Model Answer":"The response must explain how the application handles unexpected inputs, detailing test cases with missing variables, extreme boundary parameters, or bad file structures to see if error blocks trigger correctly.",
+    "Keywords":"extreme limits checking, invalid variable simulation, script fault resilience, validation exceptions, boundary verification"
+  },
+  {
+    "ID":27,
+    "Topic":"Testing",
+    "Difficulty":"Hard",
+    "Question":"Which testing tools were used?",
+    "Model Answer":"The answer should name technical tools or Python libraries utilized to verify project code health\u2014such as PyTest, Unittest, Postman for endpoint checking, or standard debugging execution modules.",
+    "Keywords":"assertion frameworks, API testing sandboxes, automation check software, execution tracking scripts, code quality modules"
+  },
+  {
+    "ID":28,
+    "Topic":"Testing",
+    "Difficulty":"Easy",
+    "Question":"How is test coverage measured?",
+    "Model Answer":"The response should explain how the team counted what percentage of their application code files ran during safety checks, ensuring no hidden background functions were left completely untested.",
+    "Keywords":"code coverage statistics, function run monitoring, testing breadth tracking, structural check analysis, codebase evaluation metrics"
+  },
+  {
+    "ID":29,
+    "Topic":"Testing",
+    "Difficulty":"Medium",
+    "Question":"Describe a critical bug and its resolution.",
+    "Model Answer":"The student must tell a logical debugging story: detailing an exact technical failure discovered in their script, tracing the cause, explaining the specific code fix applied, and how they verified the bug was gone.",
+    "Keywords":"logical script failure, tracking root cause, system patch application, regression verification, code fix deployment"
+  },
+  {
+    "ID":30,
+    "Topic":"Testing",
+    "Difficulty":"Hard",
+    "Question":"How is regression testing performed?",
+    "Model Answer":"The response must explain the safety process used after modifying the project, detailing how older code blocks are re-checked to ensure that adding new features did not break existing features.",
+    "Keywords":"feature update checks, secondary effect validation, script compatibility testing, older block preservation, systematic code auditing"
+  },
+  {
+    "ID":31,
+    "Topic":"Testing",
+    "Difficulty":"Easy",
+    "Question":"How was performance testing conducted?",
+    "Model Answer":"The answer should describe checking the software speed under heavy operations, detailing metrics like page load response times, database query execution lag, or computer processing thresholds.",
+    "Keywords":"latency metrics, execution time evaluation, processing limits checking, capacity analysis, hardware load assessment"
+  },
+  {
+    "ID":32,
+    "Topic":"Testing",
+    "Difficulty":"Medium",
+    "Question":"What improvements would you make to testing?",
+    "Model Answer":"The student should propose advanced verification upgrades, such as shifting from manual test runs to automated code checkers triggered every single time a team member pushes an update to GitHub.",
+    "Keywords":"check cycle automation, operational efficiency improvements, comprehensive script monitoring, continuous integration patterns, quality scale upgrades"
+  },
+  {
+    "ID":33,
+    "Topic":"Challenges",
+    "Difficulty":"Hard",
+    "Question":"What was the biggest development challenge?",
+    "Model Answer":"The user must detail a major technical obstacle faced during build execution, explaining architectural integration issues, platform limitations, or data structure formatting problems and how they overcame it.",
+    "Keywords":"architectural hurdles, complex technical barriers, deployment friction, resolution steps, systemic implementation issues"
+  },
+  {
+    "ID":34,
+    "Topic":"Challenges",
+    "Difficulty":"Easy",
+    "Question":"How were technical issues resolved?",
+    "Model Answer":"The answer should trace how critical architectural paths were chosen, detailing how the team evaluated conflicting solutions, balanced stakeholder input, and aligned design steps with user requirements.",
+    "Keywords":"logic models, architectural options, path evaluations, criteria weights, priority planning"
+  },
+  {
+    "ID":35,
+    "Topic":"Challenges",
+    "Difficulty":"Medium",
+    "Question":"What assumptions were made?",
+    "Model Answer":"The student must state what baseline system behaviors, user skills, data formats, or internet configurations they took for granted when planning out the software engineering code.",
+    "Keywords":"target constraints, project boundaries, baseline conditions, structural dependencies, context boundaries"
+  },
+  {
+    "ID":36,
+    "Topic":"Challenges",
+    "Difficulty":"Hard",
+    "Question":"What risks were identified?",
+    "Model Answer":"The answer should highlight potential failure loops, such as API rate timeouts, system out-of-memory locks, or concurrent request data corruption, along with the backup plans chosen to handle them.",
+    "Keywords":"technical vulnerabilities, mitigation strategy, crash exceptions, database failover, data loss hazards"
+  },
+  {
+    "ID":37,
+    "Topic":"Challenges",
+    "Difficulty":"Easy",
+    "Question":"How were changing requirements managed?",
+    "Model Answer":"The response should describe team flexibility practices, explaining how the codebase design was adapted, refactored, or planned to accommodate new modifications from the mentor without breaking the core engine.",
+    "Keywords":"design flexibility, code modularization, step-by-step development, software adaptations, scope alterations"
+  },
+  {
+    "ID":38,
+    "Topic":"Challenges",
+    "Difficulty":"Medium",
+    "Question":"What trade-offs were required?",
+    "Model Answer":"The response must contrast two competing engineering parameters (e.g., opting for fast local storage vectors over heavy database calls) and justify why one design choice was prioritized over the other.",
+    "Keywords":"choice balance, operational sacrifice, component priority, architectural trade-offs, configuration metrics"
+  },
+  {
+    "ID":39,
+    "Topic":"Challenges",
+    "Difficulty":"Hard",
+    "Question":"What would you do differently next time?",
+    "Model Answer":"The response must provide an engineering critique of their own platform, outlining an explicit technical upgrade path\u2014like automated testing integration or alternate cloud deployment pipelines\u2014if given more time.",
+    "Keywords":"retroactive refactoring, architectural lessons, design enhancements, structural modernizations, framework revisions"
+  },
+  {
+    "ID":40,
+    "Topic":"Challenges",
+    "Difficulty":"Easy",
+    "Question":"What are the current limitations?",
+    "Model Answer":"The user must state an active technical bottleneck or functional restriction of their app build (e.g., maximum concurrent data conversions, strict file upload limits) without discrediting the main engine logic.",
+    "Keywords":"system bottlenecks, current restrictions, threshold limits, functional boundaries, project gaps"
+  },
+  {
+    "ID":41,
+    "Topic":"Security",
+    "Difficulty":"Medium",
+    "Question":"How is user data protected?",
+    "Model Answer":"The student should explain input sanitization layers, variable formatting filters, or specific hashing systems utilized to shield application memory spaces from data injection attempts or leak vectors.",
+    "Keywords":"input filtering, sanitization layers, credential boundaries, structural protection, variable safety"
+  },
+  {
+    "ID":42,
+    "Topic":"Security",
+    "Difficulty":"Hard",
+    "Question":"How is unauthorized access prevented?",
+    "Model Answer":"The response must detail user permission parameters, route authorization guards, signature check blocks, or token verification processes designed to block bad actors from triggering secure backend admin functions.",
+    "Keywords":"routing barriers, authorization tokens, authentication signatures, access validation, perimeter filters"
+  },
+  {
+    "ID":43,
+    "Topic":"Security",
+    "Difficulty":"Easy",
+    "Question":"What security threats were considered?",
+    "Model Answer":"The user should list prominent vulnerabilities relevant to their build type, such as parameter manipulation, data extraction loops, cross-site script triggers, or broken object-level authentication paths.",
+    "Keywords":"parameter tampering, script vulnerability, systemic threats, data exposure paths, execution leaks"
+  },
+  {
+    "ID":44,
+    "Topic":"Security",
+    "Difficulty":"Medium",
+    "Question":"How are sensitive credentials managed?",
+    "Model Answer":"The answer must prove that sensitive values (such as database credentials or private API web keys) are kept out of plain text scripts, utilizing environment variable files or the project's secure .gitignore patterns.",
+    "Keywords":"environment management, configuration variables, secure credential isolation, token boundaries, path protections"
+  },
+  {
+    "ID":45,
+    "Topic":"Security",
+    "Difficulty":"Hard",
+    "Question":"How would you improve security further?",
+    "Model Answer":"The student should propose enterprise-grade defense additions, such as transport layer security configuration, multi-factor authorization logic, or cryptographically secure database column encryption schemes.",
+    "Keywords":"transport encryption, access policies, data layer tokens, advanced verification layers, encryption protocols"
+  },
+  {
+    "ID":46,
+    "Topic":"Deployment & Maintenance",
+    "Difficulty":"Easy",
+    "Question":"How is the application deployed?",
+    "Model Answer":"The response should outline the hosting environments or cloud infrastructure vectors selected to host the finalized project repository, detailing how a remote client connects to the live platform.",
+    "Keywords":"remote web servers, deployment pipelines, application servers, build distribution, infrastructure hosting"
+  },
+  {
+    "ID":47,
+    "Topic":"Deployment & Maintenance",
+    "Difficulty":"Medium",
+    "Question":"How is the system monitored?",
+    "Model Answer":"The answer should describe tracking execution health, mentioning server crash logs, system error capture loops, endpoint latency records, or resource utilization dashboards.",
+    "Keywords":"execution traces, error captures, metric tracing, runtime tracking, dashboard counters"
+  },
+  {
+    "ID":48,
+    "Topic":"Deployment & Maintenance",
+    "Difficulty":"Hard",
+    "Question":"How is high availability achieved?",
+    "Model Answer":"The student must discuss uptime engineering practices, describing server replication strategies, cloud resource load routing, database cluster scaling, or auto-recovery failure loops.",
+    "Keywords":"component redundancy, routing load, server clustering, cluster configurations, automated healing"
+  },
+  {
+    "ID":49,
+    "Topic":"Deployment & Maintenance",
+    "Difficulty":"Easy",
+    "Question":"How are updates and maintenance handled?",
+    "Model Answer":"The response should explain deployment workflows, detailing how code upgrades or table schema fixes are pushed to the live system without disrupting active user sessions or corrupting databases.",
+    "Keywords":"deployment cycles, operational updates, version patches, continuous code flow, script upgrades"
+  },
+  {
+    "ID":50,
+    "Topic":"Deployment & Maintenance",
+    "Difficulty":"Medium",
+    "Question":"How is long-term reliability ensured?",
+    "Model Answer":"The final answer must cover sustainable software maintenance, detailing comprehensive data archive cleanups, systematic database connection checks, and periodic software configuration upgrades.",
+    "Keywords":"script sustainability, data optimization, continuous diagnostics, system health cycles, infrastructure preservation"
+  }
+]
