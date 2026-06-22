@@ -1,0 +1,90 @@
+ID,Topic,Difficulty,Question,Model Answer,Keywords
+P001,Python,Easy,What is the difference between a list and a tuple in Python?,A list is mutable while a tuple is immutable. Lists use [] and tuples use (). Lists are slower, tuples are memory-efficient and can be dictionary keys.
+P002,Python,Easy,What is the purpose of 'self' in Python classes?,'self' represents the class instance and accesses instance variables/methods. Must be first parameter in class methods. Not a keyword but a convention.,instance
+P003,Python,Easy,What is the difference between '==' and 'is'?,'==' checks value equality, 'is' checks reference equality (same object in memory). [1
+P004,Python,Easy,What are Python decorators?,Decorators modify function behavior without changing code. Use @ symbol above function. Common for logging, authentication
+P005,Python,Easy,What is the purpose of try-except blocks?,Handle exceptions gracefully without crashing. 'try' executes normally, 'except' catches errors. 'else' if no exception
+P006,Python,Medium,Explain *args and **kwargs.,*args = variable positional arguments as tuple. **kwargs = variable keyword arguments as dict. Enable flexible function signatures.,positional
+P007,Python,Medium,What is Python's garbage collection?,Automatic garbage collection via reference counting + cyclic collector. Reference count=0 â†’ deleted. Cyclic collector handles reference cycles.,reference-count
+P008,Python,Medium,What are Python generators?,Functions using 'yield' instead of 'return'. Produce values lazily (one at a time), save memory. Maintain state between calls.
+P009,Python,Medium,Explain 'with' statement and context managers.,'with' simplifies resource management. Auto-calls __enter__() before block, __exit__() after. Used with files
+P010,Python,Medium,Shallow copy vs deep copy?,Shallow: new object, same nested objects. Deep: completely independent copy including nested. Use deepcopy for nested structures.
+P011,Python,Hard,Explain Python's GIL and multi-threading impact.,GIL = mutex allowing only one thread to execute bytecode at a time. Limits CPU-bound threading. Use multiprocessing for CPU-bound, threading for I/O-bound.
+P012,Python,Hard,What are metaclasses?,Classes of classes that define how classes behave. Default is 'type'. Used for ORM (Django), API validation
+P013,Python,Hard,Explain descriptor protocol.,Objects with __get__(), __set__()
+P014,Python,Hard,Explain async/await vs multi-threading.,async/await = asynchronous programming with coroutines. Single-threaded event loop (asyncio) for I/O-bound. Cooperative vs preemptive.,coroutine
+P015,Python,Hard,What is MRO and C3 linearization?,MRO = method resolution order in inheritance. Python uses C3 linearization for deterministic order. Prevents diamond problem.,inheritance
+O001,OOPs,Easy,What are the four main principles of OOP?,Encapsulation, Inheritance
+O002,OOPs,Easy,"What is Abstraction in OOPs, and how is it different from Encapsulation?",Abstraction hides background implementation details and displays only essential structural features to the outer program. Encapsulation wraps data variables and methods into a single unit or class to shield them from direct external modification.,"hiding complexity, data shielding, implementation vs interface, component security "
+O003,OOPs,Easy,"What is an Abstract Class, and can it be instantiated directly?",An abstract class is a restricted class blueprint used solely as a foundational base layout for inheritance. It cannot be used to create an object instance directly; it requires a child subclass to inherit it and implement its abstract methods,"class blueprint, inheritance framework, object creation restriction, method template "
+O004,OOPs,Hard,Explain Encapsulation and how access modifiers enforce it.,"Encapsulation binds variables and functions together within an object shell. It uses access modifiers like private, protected, and public to hide internal variables from outer code, forcing outside scripts to use safe getter and setter functions instead.","data wrapping, private variables, getter setter controls, code boundaries"
+O005,OOPs,Medium,What is Polymorphism? Provide a real-world software engineering example.,"Polymorphism allows different object classes to share the same method signature but execute their own unique background calculations. For example, a base 'Vehicle' class can have a 'start()' function, but 'Car' and 'Airplane' subclasses will execute entirely different code patterns when triggered","many forms, single interface, execution adaptability, runtime inheritance patterns"
+O006,OOPs,Hard,What is the core difference between an Interface and an Abstract Class?,"An abstract class can hold a mix of implemented code methods and empty method blueprints while storing standard state properties. An interface only holds empty method signatures that child classes must override, allowing a single class to implement multiple interfaces.","multiple inheritance, method declarations, abstract structural boundaries, layout contracts "
+O007,OOPs,Hard,What is the difference between Method Overloading and Method Overriding?,Method Overloading happens at compile-time when multiple functions share the same name but have different parameter sets inside one class. Method Overriding happens at runtime when a child subclass completely rewrites a parent class method using the exact same name and parameter signatures.,"compile time vs runtime, same signature, parameter variations, parent child inheritance, function polymorphism"
+O008,OOPs,Easy,Class vs object difference?,Class = blueprint/template. Object = concrete instance in memory. Multiple objects from one class.,blueprint
+O009,DSA,Easy,What is inheritance and its benefits?,Child class inherits from parent. Benefits: code reusability, extensibility
+O010,OOPs,Easy,What is polymorphism with example?,Same interface," different implementation. Dog.speak()=""Bow!"""
+O011,OOPs,Easy,What is encapsulation and why important?,Bundles data+methods, restricts direct access. Importance: data protection
+O012,OOPs,Medium,Abstraction vs encapsulation?,Abstraction = design-level hiding (interface). Encapsulation = code-level hiding (access control). Both work together.,interface
+O013,DSA,Medium,Types of inheritance with examples?,Single, Multiple
+O014,DSA,Medium,What is method overriding and polymorphism?,Child redefines parent method with same name. Enables runtime polymorphism - method depends on object type.,runtime-polymorphism
+O015,DSA,Medium,What is method overloading? Does Python support it?,Same name, different parameters. Python doesn't natively support; achieves via default params
+O016,OOPs,Medium,What are abstract classes and when to use?,Cannot be instantiated; define interface for subclasses. Use when: multiple subclasses need same interface, partial implementation helpful.
+O017,OOPs,Hard,Explain Singleton pattern and implementation?,Ensures only one instance, global access. Use: DB connections
+O018,OOPs,Hard,What is Factory pattern and benefits?,Creates objects without specifying exact class. Decouples creation from usage, easy to add new types
+O019,DSA,Hard,Composition over Inheritance principle?,Composition = has-a (combining objects). Inheritance = is-a. Prefer composition: more flexible, testable
+O020,OOPs,Hard,Interface vs abstract class difference?,Interface = pure abstraction (contract only). Abstract = partial implementation + abstract. Use interface: multiple inheritance.,contract
+O021,DSA,Hard,Explain Liskov Substitution Principle (LSP)?,Subclasses substitutable for parent without breaking program. Child must honor parent's contract.,substitutability
+D001,DSA,Easy,What is an array and basic operations?,Linear structure, contiguous memory. Operations: Access O(1)
+D002,DSA,Easy,What is a string vs array?,Sequence of characters, special array. Immutable (Python/Java)
+D003,DSA,Easy,What is time complexity and importance?,Measures runtime growth with input size (Big O). Important: predict performance, compare algorithms
+D004,DSA,Easy,Explain linear search and time complexity?,Check each element sequentially. Time: O(n) worst/average, O(1) best. Works on unsorted data.
+D005,DSA,Easy,What is bubble sort and when to use?,Repeatedly swap adjacent if wrong order. Time: O(nÂ²). Use: learning, tiny arrays. Never production for large data.
+D006,DSA,Medium,Explain binary search and requirements?,Find target in sorted array by dividing search half. Time: O(log n). Requires: sorted array, index access.
+D007,DSA,Medium,What is a stack and applications?,LIFO structure. Operations: push, pop
+D008,DSA,Medium,What is a queue vs stack?,FIFO (enqueue rear, dequeue front). Stack is LIFO. Uses: task scheduling
+D009,Python,Medium,Explain singly linked list vs arrays?,Nodes with data + next pointer. Advantages: dynamic size, O(1) insert/delete head. Disadvantages: O(n) access.
+D010,DBMS,Medium,What is hash table and O(1) operations?,Stores key-value via hash function â†’ index. O(1) average from direct access. Collisions: chaining, open addressing.
+D011,DSA,Hard,Explain Binary Search Tree (BST) and properties?,Left < parent < right. Operations: insert/search/delete O(log n) avg. Traversals: inorder (sorted), preorder
+D012,DSA,Hard,What is a graph and DFS vs BFS?,Vertices + edges. DFS: deep exploration (stack). BFS: wide exploration (queue). Both O(V+E). Uses: networks, maps.
+D013,DSA,Hard,What is dynamic programming and when to use?,Break into overlapping subproblems, store results (memoization). Use: overlapping subproblems + optimal substructure.
+D014,DSA,Hard,Explain heap and priority queues?,Complete binary tree with heap property. Max-heap: parent â‰¥ children. Uses: priority queues, heap sort
+D015,DSA,Hard,Explain quick sort and worst case?,Divide-conquer: pick pivot, partition
+DB001,DBMS,Easy,What is a database and why needed?,Organized structured data electronically. Need: organization, retrieval
+DB002,DBMS,Easy,What is SQL and main commands?,Structured Query Language for relational DBs. Commands: SELECT, INSERT
+DB003,DSA,Easy,What is primary key and characteristics?,Uniquely identifies each record. Characteristics: UNIQUE, NOT NULL
+DB004,DSA,Easy,What are common SQL data types?,Numeric: INT, BIGINT
+DB005,DBMS,Easy,What is WHERE clause and usage?,Filters rows based on condition. Operators: =, !=
+DB006,DSA,Medium,What is foreign key and relationships?,Column referencing PK in another table. Maintains referential integrity, links tables. Constraints: NULL allowed
+DB007,DBMS,Medium,Explain different types of JOINs?,INNER: matching only. LEFT: all left + matching right. RIGHT: all right + matching left. FULL: all both. CROSS: all combinations.,INNER
+DB008,DSA,Medium,What is an index and when to create?,Data structure speeding queries (O(log n) vs O(n)). Create on: JOIN columns, WHERE filters
+DB009,Python,Medium,SQL aggregate functions and GROUP BY?,COUNT(), SUM()
+DB010,DSA,Medium,What is a transaction and properties?,Sequence as single unit. ACID: Atomicity (all/no), Consistency (valid)
+DB011,DSA,Hard,Explain normalization and forms (1NF,2NF,3NF)?
+DB012,DBMS,Hard,What is SQL injection and prevention?,Attacker inserts malicious SQL via input. Prevention: parameterized queries, ORM
+DB013,DBMS,Hard,What is denormalization and when to use?,Intentionally add redundancy for performance. Trade: write speed vs read speed. Use: read-heavy, complex joins slow
+DB014,DSA,Hard,Explain concurrency problems and isolation levels?,Problems: dirty read, lost update
+DB015,DBMS,Hard,What is NoSQL and when to choose over SQL?,Non-relational for unstructured data. Types: Document (MongoDB), Key-value (Redis)
+W001,Web Fundamentals,Easy,What is HTTP and common HTTP methods?,HTTP = HyperText Transfer Protocol. Methods: GET (retrieve), POST (create)
+W002,DSA,Easy,What is HTML and main components?,HTML = HyperText Markup Language for structure. Components: <html> root, <head> metadata
+W003,DSA,Easy,What is CSS and how to select elements?,CSS = Cascading Style Sheets for styling. Selectors: element (p), class (.class)
+W004,Web Fundamentals,Easy,What are URL components?,Scheme (https://), Domain (example.com)
+W005,DSA,Easy,How does browser render web page?,1) Parse HTML â†’ DOM 2) Parse CSS â†’ CSSOM 3) Render tree 4) Layout 5) Paint. DNS â†’ TCP â†’ HTTP â†’ receive â†’ parse â†’ render.,DOM
+W006,Web Fundamentals,Medium,What is REST and its principles?,REST = Representational State Transfer. Principles: client-server, stateless
+W007,DSA,Medium,Cookies vs sessions difference?,Cookies: client-side, 4KB
+W008,DSA,Medium,Explain frontend vs backend development?,Frontend: client-side (HTML/CSS/JS/React). Backend: server-side (Python/Node/Java/DB). Communication: HTTP/REST, WebSocket.
+W009,Web Fundamentals,Medium,What is AJAX and how does it work?,AJAX = Asynchronous JavaScript and XML. Async HTTP requests without page reload. Modern: fetch() API. Benefits: smoother UX, faster.
+W010,Web Fundamentals,Medium,What is XSS and prevention?,XSS = inject malicious scripts into pages, executed in victim's browser. Prevention: escape output
+W011,Web Fundamentals,Hard,Key web performance optimization techniques?,Minify/compress, lazy load images
+W012,Web Fundamentals,Hard,Explain JWT authentication flow?,JWT = stateless auth with signed tokens. Flow: login â†’ create JWT â†’ client stores â†’ send in requests â†’ server verifies. Expiry: 15min + refresh.,stateless
+W013,Web Fundamentals,Hard,What are WebSockets and when to use?,Persistent two-way connection for real-time. vs HTTP: continuous both directions. Use: chat, gaming
+W014,Web Fundamentals,Hard,Compare SSR vs CSR rendering?,SSR: server generates HTML (Next.js). CSR: browser renders (React). SSR: faster FCP, better SEO. CSR: smoother interactions. Modern: hybrid.
+W015,Web Fundamentals,Hard,What is CORS and how does it work?,CORS = Cross-Origin Resource Sharing. Browser security for controlled cross-origin requests. Server sends Access-Control-Allow-Origin header.,cross-origin
+W016,DBMS,Easy,What is the primary difference between a Primary Key and a Unique Key constraint?,"A primary key uniquely identifies each record in a table and strictly cannot accept NULL values. A unique key also enforces uniqueness for a column, but it allows one single NULL value within that column.","unique identifier, NULL constraints, table restriction, key differences. "
+W017,DBMS,Easy,What is the purpose of the SQL WHERE clause?,The WHERE clause is used to filter records in a SQL query based on a specific conditional expression. It extracts only those database rows that fulfill the specified search criteria.,"filtering rows, condition evaluation, row constraints, query filter"
+W018,DBMS,Medium,Explain the difference between a Left Join and an Inner Join in SQL.,"An Inner Join returns only the matching rows from both tables based on a join condition. A Left Join returns all rows from the left table, plus matching rows from the right table, filling with NULL values if no match exists.","matching rows, non-matching records, left table preservation, data intersection"
+W019,DBMS,Medium,What are aggregate functions in SQL? Name three common examples.,"Aggregate functions perform a calculation on a set of values in a column and return a single summarizing value. Common examples include SUM, AVG, COUNT, MIN, and MAX.","column calculation, summary math, SUM, AVG, COUNT, group evaluation "
+W020,DBMS,Medium,"What is database normalization, and why is First Normal Form (1NF) critical?","Normalization organizes data to reduce redundancy and eliminate transaction anomalies. First Normal Form is critical because it forces every table cell to hold only atomic, indivisible values and ensures every row is uniquely identifiable.","atomic values, reducing redundancy, table structural integrity, normalization rules"
+W021,DBMS,Medium,What is the purpose of a Foreign Key constraint in relational databases?,"Foreign Key is a column or group of columns that points directly to the Primary Key in another table. It is used to establish and enforce a secure link between the data in two tables, ensuring referential integrity.","referential integrity, relational mapping, parent child link, data constraints"
+W022,DBMS,Hard,"What is a database index, and how does it prevent slow full-table scans?","database index is a pointer structure built on specific columns to accelerate data retrieval speed. It acts like an alphabetical book index, mapping data pathways so the engine can jump straight to a row without scanning the entire hard drive table sequentially.","search acceleration, lookup paths, scanning mitigation, query optimization  "
+W023,DBMS,Hard,Explain the Isolation property in ACID transactions and how it handles concurrency.,Isolation ensures that the execution of concurrent transactions occurs independently without bleeding into each other. It hides the uncommitted database changes of one transaction from other running tasks using data locking mechanisms to prevent race conditions.,"concurrent changes, race conditions, locking mechanisms, state separation, ACID transaction"
