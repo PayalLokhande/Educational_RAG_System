@@ -1,0 +1,722 @@
+[
+  {
+    "id":"P001",
+    "Topic":"Python Basics",
+    "Difficulty":"Easy",
+    "Question":"What is the difference between a list and a tuple in Python?",
+    "Model Answer":"A list is mutable while a tuple is immutable. Lists use [] and tuples use (). Lists are slower",
+    "Keywords":" tuples are memory-efficient and can be dictionary keys."
+  },
+  {
+    "id":"P002",
+    "Topic":"Python Basics",
+    "Difficulty":"Easy",
+    "Question":"What is the purpose of 'self' in Python classes?",
+    "Model Answer":"'self' represents the class instance and accesses instance variables\/methods. Must be first parameter in class methods. Not a keyword but a convention.",
+    "Keywords":"instance"
+  },
+  {
+    "id":"P003",
+    "Topic":"Python Functions",
+    "Difficulty":"Easy",
+    "Question":"What is the difference between '==' and 'is'?",
+    "Model Answer":"'==' checks value equality",
+    "Keywords":" 'is' checks reference equality (same object in memory). [1"
+  },
+  {
+    "id":"P004",
+    "Topic":"Python Basics",
+    "Difficulty":"Easy",
+    "Question":"What are Python decorators?",
+    "Model Answer":"Decorators modify function behavior without changing code. Use @ symbol above function. Common for logging",
+    "Keywords":" authentication"
+  },
+  {
+    "id":"P005",
+    "Topic":"Python Exception Handling",
+    "Difficulty":"Easy",
+    "Question":"What is the purpose of try-except blocks?",
+    "Model Answer":"Handle exceptions gracefully without crashing. 'try' executes normally",
+    "Keywords":" 'except' catches errors. 'else' if no exception"
+  },
+  {
+    "id":"P006",
+    "Topic":"Python Functions",
+    "Difficulty":"Medium",
+    "Question":"Explain *args and **kwargs.",
+    "Model Answer":"*args = variable positional arguments as tuple. **kwargs = variable keyword arguments as dict. Enable flexible function signatures.",
+    "Keywords":"positional"
+  },
+  {
+    "id":"P007",
+    "Topic":"Python Memory Management",
+    "Difficulty":"Medium",
+    "Question":"What is Python's garbage collection?",
+    "Model Answer":"Automatic garbage collection via reference counting + cyclic collector. Reference count=0 \u00e2\u2020\u2019 deleted. Cyclic collector handles reference cycles.",
+    "Keywords":"reference-count"
+  },
+  {
+    "id":"P008",
+    "Topic":"Python Generators",
+    "Difficulty":"Medium",
+    "Question":"What are Python generators?",
+    "Model Answer":"Functions using 'yield' instead of 'return'. Produce values lazily (one at a time)",
+    "Keywords":" save memory. Maintain state between calls."
+  },
+  {
+    "id":"P009",
+    "Topic":"Python Context Managers",
+    "Difficulty":"Medium",
+    "Question":"Explain 'with' statement and context managers.",
+    "Model Answer":"'with' simplifies resource management. Auto-calls __enter__() before block",
+    "Keywords":" __exit__() after. Used with files"
+  },
+  {
+    "id":"P010",
+    "Topic":"Python Advanced",
+    "Difficulty":"Medium",
+    "Question":"Shallow copy vs deep copy?",
+    "Model Answer":"Shallow: new object",
+    "Keywords":" same nested objects. Deep: completely independent copy including nested. Use deepcopy for nested structures."
+  },
+  {
+    "id":"P011",
+    "Topic":"Python Advanced",
+    "Difficulty":"Hard",
+    "Question":"Explain Python's GIL and multi-threading impact.",
+    "Model Answer":"GIL = mutex allowing only one thread to execute bytecode at a time. Limits CPU-bound threading. Use multiprocessing for CPU-bound",
+    "Keywords":" threading for I\/O-bound."
+  },
+  {
+    "id":"P012",
+    "Topic":"Python Metaclasses",
+    "Difficulty":"Hard",
+    "Question":"What are metaclasses?",
+    "Model Answer":"Classes of classes that define how classes behave. Default is 'type'. Used for ORM (Django)",
+    "Keywords":" API validation"
+  },
+  {
+    "id":"P013",
+    "Topic":"Python Advanced",
+    "Difficulty":"Hard",
+    "Question":"Explain descriptor protocol.",
+    "Model Answer":"Objects with __get__()",
+    "Keywords":" __set__()"
+  },
+  {
+    "id":"P014",
+    "Topic":"Python Async",
+    "Difficulty":"Hard",
+    "Question":"Explain async\/await vs multi-threading.",
+    "Model Answer":"async\/await = asynchronous programming with coroutines. Single-threaded event loop (asyncio) for I\/O-bound. Cooperative vs preemptive.",
+    "Keywords":"coroutine"
+  },
+  {
+    "id":"P015",
+    "Topic":"Python Advanced",
+    "Difficulty":"Hard",
+    "Question":"What is MRO and C3 linearization?",
+    "Model Answer":"MRO = method resolution order in inheritance. Python uses C3 linearization for deterministic order. Prevents diamond problem.",
+    "Keywords":"inheritance"
+  },
+  {
+    "id":"O001",
+    "Topic":"OOPS Basics",
+    "Difficulty":"Easy",
+    "Question":"What are the four main principles of OOP?",
+    "Model Answer":"Encapsulation",
+    "Keywords":" Inheritance"
+  },
+  {
+    "id":"O002",
+    "Topic":"OOPs",
+    "Difficulty":"Easy",
+    "Question":"What is Abstraction in OOPs, and how is it different from Encapsulation?",
+    "Model Answer":"Abstraction hides background implementation details and displays only essential structural features to the outer program. Encapsulation wraps data variables and methods into a single unit or class to shield them from direct external modification.",
+    "Keywords":"hiding complexity, data shielding, implementation vs interface, component security "
+  },
+  {
+    "id":"O003",
+    "Topic":"OOPs",
+    "Difficulty":"Easy",
+    "Question":"What is an Abstract Class, and can it be instantiated directly?",
+    "Model Answer":"An abstract class is a restricted class blueprint used solely as a foundational base layout for inheritance. It cannot be used to create an object instance directly; it requires a child subclass to inherit it and implement its abstract methods",
+    "Keywords":"class blueprint, inheritance framework, object creation restriction, method template "
+  },
+  {
+    "id":"O004",
+    "Topic":"OOPs",
+    "Difficulty":"Hard",
+    "Question":"Explain Encapsulation and how access modifiers enforce it.",
+    "Model Answer":"Encapsulation binds variables and functions together within an object shell. It uses access modifiers like private, protected, and public to hide internal variables from outer code, forcing outside scripts to use safe getter and setter functions instead.",
+    "Keywords":"data wrapping, private variables, getter setter controls, code boundaries"
+  },
+  {
+    "id":"O005",
+    "Topic":"OOPs",
+    "Difficulty":"Medium",
+    "Question":"What is Polymorphism? Provide a real-world software engineering example.",
+    "Model Answer":"Polymorphism allows different object classes to share the same method signature but execute their own unique background calculations. For example, a base 'Vehicle' class can have a 'start()' function, but 'Car' and 'Airplane' subclasses will execute entirely different code patterns when triggered",
+    "Keywords":"many forms, single interface, execution adaptability, runtime inheritance patterns"
+  },
+  {
+    "id":"O006",
+    "Topic":"OOPs",
+    "Difficulty":"Hard",
+    "Question":"What is the core difference between an Interface and an Abstract Class?",
+    "Model Answer":"An abstract class can hold a mix of implemented code methods and empty method blueprints while storing standard state properties. An interface only holds empty method signatures that child classes must override, allowing a single class to implement multiple interfaces.",
+    "Keywords":"multiple inheritance, method declarations, abstract structural boundaries, layout contracts "
+  },
+  {
+    "id":"O007",
+    "Topic":"OOPs",
+    "Difficulty":"Hard",
+    "Question":"What is the difference between Method Overloading and Method Overriding?",
+    "Model Answer":"Method Overloading happens at compile-time when multiple functions share the same name but have different parameter sets inside one class. Method Overriding happens at runtime when a child subclass completely rewrites a parent class method using the exact same name and parameter signatures.",
+    "Keywords":"compile time vs runtime, same signature, parameter variations, parent child inheritance, function polymorphism"
+  },
+  {
+    "id":"O008",
+    "Topic":"Classes and Objects",
+    "Difficulty":"Easy",
+    "Question":"Class vs object difference?",
+    "Model Answer":"Class = blueprint\/template. Object = concrete instance in memory. Multiple objects from one class.",
+    "Keywords":"blueprint"
+  },
+  {
+    "id":"O009",
+    "Topic":"Inheritance",
+    "Difficulty":"Easy",
+    "Question":"What is inheritance and its benefits?",
+    "Model Answer":"Child class inherits from parent. Benefits: code reusability",
+    "Keywords":" extensibility"
+  },
+  {
+    "id":"O010",
+    "Topic":"Polymorphism",
+    "Difficulty":"Easy",
+    "Question":"What is polymorphism with example?",
+    "Model Answer":"Same interface",
+    "Keywords":" different implementation. Dog.speak()=\"Bow!\""
+  },
+  {
+    "id":"O011",
+    "Topic":"Encapsulation",
+    "Difficulty":"Easy",
+    "Question":"What is encapsulation and why important?",
+    "Model Answer":"Bundles data+methods",
+    "Keywords":" restricts direct access. Importance: data protection"
+  },
+  {
+    "id":"O012",
+    "Topic":"Abstraction",
+    "Difficulty":"Medium",
+    "Question":"Abstraction vs encapsulation?",
+    "Model Answer":"Abstraction = design-level hiding (interface). Encapsulation = code-level hiding (access control). Both work together.",
+    "Keywords":"interface"
+  },
+  {
+    "id":"O013",
+    "Topic":"Inheritance Types",
+    "Difficulty":"Medium",
+    "Question":"Types of inheritance with examples?",
+    "Model Answer":"Single",
+    "Keywords":" Multiple"
+  },
+  {
+    "id":"O014",
+    "Topic":"Method Overriding",
+    "Difficulty":"Medium",
+    "Question":"What is method overriding and polymorphism?",
+    "Model Answer":"Child redefines parent method with same name. Enables runtime polymorphism - method depends on object type.",
+    "Keywords":"runtime-polymorphism"
+  },
+  {
+    "id":"O015",
+    "Topic":"Method Overloading",
+    "Difficulty":"Medium",
+    "Question":"What is method overloading? Does Python support it?",
+    "Model Answer":"Same name",
+    "Keywords":" different parameters. Python doesn't natively support; achieves via default params"
+  },
+  {
+    "id":"O016",
+    "Topic":"Abstract Classes",
+    "Difficulty":"Medium",
+    "Question":"What are abstract classes and when to use?",
+    "Model Answer":"Cannot be instantiated; define interface for subclasses. Use when: multiple subclasses need same interface",
+    "Keywords":" partial implementation helpful."
+  },
+  {
+    "id":"O017",
+    "Topic":"Design Patterns",
+    "Difficulty":"Hard",
+    "Question":"Explain Singleton pattern and implementation?",
+    "Model Answer":"Ensures only one instance",
+    "Keywords":" global access. Use: DB connections"
+  },
+  {
+    "id":"O018",
+    "Topic":"Design Patterns",
+    "Difficulty":"Hard",
+    "Question":"What is Factory pattern and benefits?",
+    "Model Answer":"Creates objects without specifying exact class. Decouples creation from usage",
+    "Keywords":" easy to add new types"
+  },
+  {
+    "id":"O019",
+    "Topic":"Composition",
+    "Difficulty":"Hard",
+    "Question":"Composition over Inheritance principle?",
+    "Model Answer":"Composition = has-a (combining objects). Inheritance = is-a. Prefer composition: more flexible",
+    "Keywords":" testable"
+  },
+  {
+    "id":"O020",
+    "Topic":"Interface vs Abstract Class",
+    "Difficulty":"Hard",
+    "Question":"Interface vs abstract class difference?",
+    "Model Answer":"Interface = pure abstraction (contract only). Abstract = partial implementation + abstract. Use interface: multiple inheritance.",
+    "Keywords":"contract"
+  },
+  {
+    "id":"O021",
+    "Topic":"Liskov Substitution",
+    "Difficulty":"Hard",
+    "Question":"Explain Liskov Substitution Principle (LSP)?",
+    "Model Answer":"Subclasses substitutable for parent without breaking program. Child must honor parent's contract.",
+    "Keywords":"substitutability"
+  },
+  {
+    "id":"D001",
+    "Topic":"Arrays",
+    "Difficulty":"Easy",
+    "Question":"What is an array and basic operations?",
+    "Model Answer":"Linear structure",
+    "Keywords":" contiguous memory. Operations: Access O(1)"
+  },
+  {
+    "id":"D002",
+    "Topic":"Strings",
+    "Difficulty":"Easy",
+    "Question":"What is a string vs array?",
+    "Model Answer":"Sequence of characters",
+    "Keywords":" special array. Immutable (Python\/Java)"
+  },
+  {
+    "id":"D003",
+    "Topic":"Time Complexity",
+    "Difficulty":"Easy",
+    "Question":"What is time complexity and importance?",
+    "Model Answer":"Measures runtime growth with input size (Big O). Important: predict performance",
+    "Keywords":" compare algorithms"
+  },
+  {
+    "id":"D004",
+    "Topic":"Linear Search",
+    "Difficulty":"Easy",
+    "Question":"Explain linear search and time complexity?",
+    "Model Answer":"Check each element sequentially. Time: O(n) worst\/average",
+    "Keywords":" O(1) best. Works on unsorted data."
+  },
+  {
+    "id":"D005",
+    "Topic":"Bubble Sort",
+    "Difficulty":"Easy",
+    "Question":"What is bubble sort and when to use?",
+    "Model Answer":"Repeatedly swap adjacent if wrong order. Time: O(n\u00c2\u00b2). Use: learning",
+    "Keywords":" tiny arrays. Never production for large data."
+  },
+  {
+    "id":"D006",
+    "Topic":"Binary Search",
+    "Difficulty":"Medium",
+    "Question":"Explain binary search and requirements?",
+    "Model Answer":"Find target in sorted array by dividing search half. Time: O(log n). Requires: sorted array",
+    "Keywords":" index access."
+  },
+  {
+    "id":"D007",
+    "Topic":"Stacks",
+    "Difficulty":"Medium",
+    "Question":"What is a stack and applications?",
+    "Model Answer":"LIFO structure. Operations: push",
+    "Keywords":" pop"
+  },
+  {
+    "id":"D008",
+    "Topic":"Queues",
+    "Difficulty":"Medium",
+    "Question":"What is a queue vs stack?",
+    "Model Answer":"FIFO (enqueue rear",
+    "Keywords":" dequeue front). Stack is LIFO. Uses: task scheduling"
+  },
+  {
+    "id":"D009",
+    "Topic":"Linked Lists",
+    "Difficulty":"Medium",
+    "Question":"Explain singly linked list vs arrays?",
+    "Model Answer":"Nodes with data + next pointer. Advantages: dynamic size",
+    "Keywords":" O(1) insert\/delete head. Disadvantages: O(n) access."
+  },
+  {
+    "id":"D010",
+    "Topic":"Hash Tables",
+    "Difficulty":"Medium",
+    "Question":"What is hash table and O(1) operations?",
+    "Model Answer":"Stores key-value via hash function \u00e2\u2020\u2019 index. O(1) average from direct access. Collisions: chaining",
+    "Keywords":" open addressing."
+  },
+  {
+    "id":"D011",
+    "Topic":"Trees",
+    "Difficulty":"Hard",
+    "Question":"Explain Binary Search Tree (BST) and properties?",
+    "Model Answer":"Left < parent < right. Operations: insert\/search\/delete O(log n) avg. Traversals: inorder (sorted)",
+    "Keywords":" preorder"
+  },
+  {
+    "id":"D012",
+    "Topic":"Graphs",
+    "Difficulty":"Hard",
+    "Question":"What is a graph and DFS vs BFS?",
+    "Model Answer":"Vertices + edges. DFS: deep exploration (stack). BFS: wide exploration (queue). Both O(V+E). Uses: networks",
+    "Keywords":" maps."
+  },
+  {
+    "id":"D013",
+    "Topic":"Dynamic Programming",
+    "Difficulty":"Hard",
+    "Question":"What is dynamic programming and when to use?",
+    "Model Answer":"Break into overlapping subproblems",
+    "Keywords":" store results (memoization). Use: overlapping subproblems + optimal substructure."
+  },
+  {
+    "id":"D014",
+    "Topic":"Heaps",
+    "Difficulty":"Hard",
+    "Question":"Explain heap and priority queues?",
+    "Model Answer":"Complete binary tree with heap property. Max-heap: parent \u00e2\u2030\u00a5 children. Uses: priority queues",
+    "Keywords":" heap sort"
+  },
+  {
+    "id":"D015",
+    "Topic":"Advanced Sorting",
+    "Difficulty":"Hard",
+    "Question":"Explain quick sort and worst case?",
+    "Model Answer":"Divide-conquer: pick pivot",
+    "Keywords":" partition"
+  },
+  {
+    "id":"DB001",
+    "Topic":"Database Basics",
+    "Difficulty":"Easy",
+    "Question":"What is a database and why needed?",
+    "Model Answer":"Organized structured data electronically. Need: organization",
+    "Keywords":" retrieval"
+  },
+  {
+    "id":"DB002",
+    "Topic":"SQL Basics",
+    "Difficulty":"Easy",
+    "Question":"What is SQL and main commands?",
+    "Model Answer":"Structured Query Language for relational DBs. Commands: SELECT",
+    "Keywords":" INSERT"
+  },
+  {
+    "id":"DB003",
+    "Topic":"Primary Key",
+    "Difficulty":"Easy",
+    "Question":"What is primary key and characteristics?",
+    "Model Answer":"Uniquely identifies each record. Characteristics: UNIQUE",
+    "Keywords":" NOT NULL"
+  },
+  {
+    "id":"DB004",
+    "Topic":"Data Types",
+    "Difficulty":"Easy",
+    "Question":"What are common SQL data types?",
+    "Model Answer":"Numeric: INT",
+    "Keywords":" BIGINT"
+  },
+  {
+    "id":"DB005",
+    "Topic":"WHERE Clause",
+    "Difficulty":"Easy",
+    "Question":"What is WHERE clause and usage?",
+    "Model Answer":"Filters rows based on condition. Operators: =",
+    "Keywords":" !="
+  },
+  {
+    "id":"DB006",
+    "Topic":"Foreign Key",
+    "Difficulty":"Medium",
+    "Question":"What is foreign key and relationships?",
+    "Model Answer":"Column referencing PK in another table. Maintains referential integrity",
+    "Keywords":" links tables. Constraints: NULL allowed"
+  },
+  {
+    "id":"DB007",
+    "Topic":"JOINs",
+    "Difficulty":"Medium",
+    "Question":"Explain different types of JOINs?",
+    "Model Answer":"INNER: matching only. LEFT: all left + matching right. RIGHT: all right + matching left. FULL: all both. CROSS: all combinations.",
+    "Keywords":"INNER"
+  },
+  {
+    "id":"DB008",
+    "Topic":"Indexes",
+    "Difficulty":"Medium",
+    "Question":"What is an index and when to create?",
+    "Model Answer":"Data structure speeding queries (O(log n) vs O(n)). Create on: JOIN columns",
+    "Keywords":" WHERE filters"
+  },
+  {
+    "id":"DB009",
+    "Topic":"Aggregate Functions",
+    "Difficulty":"Medium",
+    "Question":"SQL aggregate functions and GROUP BY?",
+    "Model Answer":"COUNT()",
+    "Keywords":" SUM()"
+  },
+  {
+    "id":"DB010",
+    "Topic":"Transactions",
+    "Difficulty":"Medium",
+    "Question":"What is a transaction and properties?",
+    "Model Answer":"Sequence as single unit. ACID: Atomicity (all\/no)",
+    "Keywords":" Consistency (valid)"
+  },
+  {
+    "id":"DB011",
+    "Topic":"Normalization",
+    "Difficulty":"Hard",
+    "Question":"Explain normalization and forms (1NF",
+    "Model Answer":"2NF",
+    "Keywords":"3NF)?"
+  },
+  {
+    "id":"DB012",
+    "Topic":"SQL Injection",
+    "Difficulty":"Hard",
+    "Question":"What is SQL injection and prevention?",
+    "Model Answer":"Attacker inserts malicious SQL via input. Prevention: parameterized queries",
+    "Keywords":" ORM"
+  },
+  {
+    "id":"DB013",
+    "Topic":"Database Design",
+    "Difficulty":"Hard",
+    "Question":"What is denormalization and when to use?",
+    "Model Answer":"Intentionally add redundancy for performance. Trade: write speed vs read speed. Use: read-heavy",
+    "Keywords":" complex joins slow"
+  },
+  {
+    "id":"DB014",
+    "Topic":"Concurrency",
+    "Difficulty":"Hard",
+    "Question":"Explain concurrency problems and isolation levels?",
+    "Model Answer":"Problems: dirty read",
+    "Keywords":" lost update"
+  },
+  {
+    "id":"DB015",
+    "Topic":"NoSQL",
+    "Difficulty":"Hard",
+    "Question":"What is NoSQL and when to choose over SQL?",
+    "Model Answer":"Non-relational for unstructured data. Types: Document (MongoDB)",
+    "Keywords":" Key-value (Redis)"
+  },
+  {
+    "id":"W001",
+    "Topic":"HTTP Basics",
+    "Difficulty":"Easy",
+    "Question":"What is HTTP and common HTTP methods?",
+    "Model Answer":"HTTP = HyperText Transfer Protocol. Methods: GET (retrieve)",
+    "Keywords":" POST (create)"
+  },
+  {
+    "id":"W002",
+    "Topic":"HTML Basics",
+    "Difficulty":"Easy",
+    "Question":"What is HTML and main components?",
+    "Model Answer":"HTML = HyperText Markup Language for structure. Components: <html> root",
+    "Keywords":" <head> metadata"
+  },
+  {
+    "id":"W003",
+    "Topic":"CSS Basics",
+    "Difficulty":"Easy",
+    "Question":"What is CSS and how to select elements?",
+    "Model Answer":"CSS = Cascading Style Sheets for styling. Selectors: element (p)",
+    "Keywords":" class (.class)"
+  },
+  {
+    "id":"W004",
+    "Topic":"URL Structure",
+    "Difficulty":"Easy",
+    "Question":"What are URL components?",
+    "Model Answer":"Scheme (https:\/\/)",
+    "Keywords":" Domain (example.com)"
+  },
+  {
+    "id":"W005",
+    "Topic":"Browser Basics",
+    "Difficulty":"Easy",
+    "Question":"How does browser render web page?",
+    "Model Answer":"1) Parse HTML \u00e2\u2020\u2019 DOM 2) Parse CSS \u00e2\u2020\u2019 CSSOM 3) Render tree 4) Layout 5) Paint. DNS \u00e2\u2020\u2019 TCP \u00e2\u2020\u2019 HTTP \u00e2\u2020\u2019 receive \u00e2\u2020\u2019 parse \u00e2\u2020\u2019 render.",
+    "Keywords":"DOM"
+  },
+  {
+    "id":"W006",
+    "Topic":"REST API",
+    "Difficulty":"Medium",
+    "Question":"What is REST and its principles?",
+    "Model Answer":"REST = Representational State Transfer. Principles: client-server",
+    "Keywords":" stateless"
+  },
+  {
+    "id":"W007",
+    "Topic":"Cookies vs Sessions",
+    "Difficulty":"Medium",
+    "Question":"Cookies vs sessions difference?",
+    "Model Answer":"Cookies: client-side",
+    "Keywords":" 4KB"
+  },
+  {
+    "id":"W008",
+    "Topic":"Frontend vs Backend",
+    "Difficulty":"Medium",
+    "Question":"Explain frontend vs backend development?",
+    "Model Answer":"Frontend: client-side (HTML\/CSS\/JS\/React). Backend: server-side (Python\/Node\/Java\/DB). Communication: HTTP\/REST",
+    "Keywords":" WebSocket."
+  },
+  {
+    "id":"W009",
+    "Topic":"AJAX",
+    "Difficulty":"Medium",
+    "Question":"What is AJAX and how does it work?",
+    "Model Answer":"AJAX = Asynchronous JavaScript and XML. Async HTTP requests without page reload. Modern: fetch() API. Benefits: smoother UX",
+    "Keywords":" faster."
+  },
+  {
+    "id":"W010",
+    "Topic":"Web Security",
+    "Difficulty":"Medium",
+    "Question":"What is XSS and prevention?",
+    "Model Answer":"XSS = inject malicious scripts into pages",
+    "Keywords":" executed in victim's browser. Prevention: escape output"
+  },
+  {
+    "id":"W011",
+    "Topic":"Web Performance",
+    "Difficulty":"Hard",
+    "Question":"Key web performance optimization techniques?",
+    "Model Answer":"Minify\/compress",
+    "Keywords":" lazy load images"
+  },
+  {
+    "id":"W012",
+    "Topic":"Authentication",
+    "Difficulty":"Hard",
+    "Question":"Explain JWT authentication flow?",
+    "Model Answer":"JWT = stateless auth with signed tokens. Flow: login \u00e2\u2020\u2019 create JWT \u00e2\u2020\u2019 client stores \u00e2\u2020\u2019 send in requests \u00e2\u2020\u2019 server verifies. Expiry: 15min + refresh.",
+    "Keywords":"stateless"
+  },
+  {
+    "id":"W013",
+    "Topic":"WebSockets",
+    "Difficulty":"Hard",
+    "Question":"What are WebSockets and when to use?",
+    "Model Answer":"Persistent two-way connection for real-time. vs HTTP: continuous both directions. Use: chat",
+    "Keywords":" gaming"
+  },
+  {
+    "id":"W014",
+    "Topic":"Server-Side vs Client-Side",
+    "Difficulty":"Hard",
+    "Question":"Compare SSR vs CSR rendering?",
+    "Model Answer":"SSR: server generates HTML (Next.js). CSR: browser renders (React). SSR: faster FCP",
+    "Keywords":" better SEO. CSR: smoother interactions. Modern: hybrid."
+  },
+  {
+    "id":"W015",
+    "Topic":"CORS",
+    "Difficulty":"Hard",
+    "Question":"What is CORS and how does it work?",
+    "Model Answer":"CORS = Cross-Origin Resource Sharing. Browser security for controlled cross-origin requests. Server sends Access-Control-Allow-Origin header.",
+    "Keywords":"cross-origin"
+  },
+  {
+    "id":"W016",
+    "Topic":"DBMS",
+    "Difficulty":"Easy",
+    "Question":"What is the primary difference between a Primary Key and a Unique Key constraint?",
+    "Model Answer":"A primary key uniquely identifies each record in a table and strictly cannot accept NULL values. A unique key also enforces uniqueness for a column, but it allows one single NULL value within that column.",
+    "Keywords":"unique identifier, NULL constraints, table restriction, key differences. "
+  },
+  {
+    "id":"W017",
+    "Topic":"DBMS",
+    "Difficulty":"Easy",
+    "Question":"What is the purpose of the SQL WHERE clause?",
+    "Model Answer":"The WHERE clause is used to filter records in a SQL query based on a specific conditional expression. It extracts only those database rows that fulfill the specified search criteria.",
+    "Keywords":"filtering rows, condition evaluation, row constraints, query filter"
+  },
+  {
+    "id":"W018",
+    "Topic":"DBMS",
+    "Difficulty":"Medium",
+    "Question":"Explain the difference between a Left Join and an Inner Join in SQL.",
+    "Model Answer":"An Inner Join returns only the matching rows from both tables based on a join condition. A Left Join returns all rows from the left table, plus matching rows from the right table, filling with NULL values if no match exists.",
+    "Keywords":"matching rows, non-matching records, left table preservation, data intersection"
+  },
+  {
+    "id":"W019",
+    "Topic":"DBMS",
+    "Difficulty":"Medium",
+    "Question":"What are aggregate functions in SQL? Name three common examples.",
+    "Model Answer":"Aggregate functions perform a calculation on a set of values in a column and return a single summarizing value. Common examples include SUM, AVG, COUNT, MIN, and MAX.",
+    "Keywords":"column calculation, summary math, SUM, AVG, COUNT, group evaluation "
+  },
+  {
+    "id":"W020",
+    "Topic":"DBMS",
+    "Difficulty":"Medium",
+    "Question":"What is database normalization, and why is First Normal Form (1NF) critical?",
+    "Model Answer":"Normalization organizes data to reduce redundancy and eliminate transaction anomalies. First Normal Form is critical because it forces every table cell to hold only atomic, indivisible values and ensures every row is uniquely identifiable.",
+    "Keywords":"atomic values, reducing redundancy, table structural integrity, normalization rules"
+  },
+  {
+    "id":"W021",
+    "Topic":"DBMS",
+    "Difficulty":"Medium",
+    "Question":"What is the purpose of a Foreign Key constraint in relational databases?",
+    "Model Answer":"Foreign Key is a column or group of columns that points directly to the Primary Key in another table. It is used to establish and enforce a secure link between the data in two tables, ensuring referential integrity.",
+    "Keywords":"referential integrity, relational mapping, parent child link, data constraints"
+  },
+  {
+    "id":"W022",
+    "Topic":"DBMS",
+    "Difficulty":"Hard",
+    "Question":"What is a database index, and how does it prevent slow full-table scans?",
+    "Model Answer":"database index is a pointer structure built on specific columns to accelerate data retrieval speed. It acts like an alphabetical book index, mapping data pathways so the engine can jump straight to a row without scanning the entire hard drive table sequentially.",
+    "Keywords":"search acceleration, lookup paths, scanning mitigation, query optimization  "
+  },
+  {
+    "id":"W023",
+    "Topic":"DBMS",
+    "Difficulty":"Hard",
+    "Question":"Explain the Isolation property in ACID transactions and how it handles concurrency.",
+    "Model Answer":"Isolation ensures that the execution of concurrent transactions occurs independently without bleeding into each other. It hides the uncommitted database changes of one transaction from other running tasks using data locking mechanisms to prevent race conditions.",
+    "Keywords":"concurrent changes, race conditions, locking mechanisms, state separation, ACID transaction"
+  },
+  {
+    "id":"B001",
+    "Topic":"Behavioral",
+    "Difficulty":"Easy",
+    "Question":"Introduce yourself and briefly summarize your technical background, core engineering skillsets, and major academic projects.",
+    "Model Answer":"Candidate must clearly articulate their name, current domain expertise, core technical stack highlights, and concisely detail the architecture of at least one project deployment.",
+    "Keywords":"communication, skills, experience, project, data structures, backend, python, frontend"
+  }
+]
