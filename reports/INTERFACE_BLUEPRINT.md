@@ -1,6 +1,5 @@
 # 🛡️ SYSTEM DESIGN & FRONTEND INTERFACE BLUEPRINT
 * **Project Module:** AI-Powered Technical Interview & Project Viva Simulator
-* **Master Quality Auditor & Project Manager:** [YOUR NAME / GITHUB HANDLE]
 * **Audit Signature Status:** [PASSED & SPECURED]
 * **Framework Target:** React.js / Modular State Architecture
 
