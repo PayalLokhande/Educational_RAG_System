@@ -192,7 +192,7 @@ The Technical Interview Arena provides a distraction-free, immersive technical i
 *   **Mobile View:** Single-column layout. Center active chat workspace gains full display focus, while side-panes turn into toggleable overlay sheets.
 *   **State Management Isolation:** All panel views run on modular, isolated React states, guaranteeing that navigating via the Global Menu Bar never leaks data or crashes memory across simulator engines.
 
-*   # 4. Screen 3: The Project Viva Simulator Arena
+    # 4. Screen 3: The Project Viva Simulator Arena
 
 ## Screen Objective
 The Project Viva Simulator Arena provides a strict, academic environment designed to replicate an official university or board-level project defense examination. It uses Context-Aware RAG (Retrieval-Augmented Generation) to grill students on their uploaded documents.
