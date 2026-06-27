@@ -192,3 +192,76 @@ The Technical Interview Arena provides a distraction-free, immersive technical i
 *   **Mobile View:** Single-column layout. Center active chat workspace gains full display focus, while side-panes turn into toggleable overlay sheets.
 *   **State Management Isolation:** All panel views run on modular, isolated React states, guaranteeing that navigating via the Global Menu Bar never leaks data or crashes memory across simulator engines.
 
+*   # 4. Screen 3: The Project Viva Simulator Arena
+
+## Screen Objective
+The Project Viva Simulator Arena provides a strict, academic environment designed to replicate an official university or board-level project defense examination. It uses Context-Aware RAG (Retrieval-Augmented Generation) to grill students on their uploaded documents.
+
+---
+
+## Theme & Visual Identity
+*   **Primary Palette:** Deep Teal (`#0B3D3E`) and Charcoal Green (`#1C2B2B`).
+*   **Accent Palette:** Muted Gold (`#C9A24B`) reserved for active state highlights and high-tier score indicators.
+*   **Mood:** High-stakes, academic, professional, and visually separate from the Technical track to immediately signal that the application has loaded an entirely separate data and model engine.
+*   **Typography:** Matches global app font scales. Headers render in Deep Teal; body text reads in clear soft off-white (`#EDEFEE`) against high-contrast dark pane elements.
+
+---
+
+## Layout Geometry: 3-Pane Split (UX Symmetry Framework)
+
+```text
+--------------------------------------------------------------
+
+|                  Global Navigation Bar                     |
+--------------------------------------------------------------
+
+| Left Sidebar |       Center Workspace      | Right Sidebar |
+| Dedicated    │   Project Document Ingest   │ Remediation & │
+│ Isolated     │   and Conversation          │ SDLC Lifecycle│
+│ Viva History │   Message Bubbles Feed      │ Cockpit Area  │
+--------------------------------------------------------------
+```
+
+### ⬅️ LEFT PANE — History Sidebar (`VivaHistorySidebar`)
+*   **Purpose:** Dedicated session history vault log.
+*   **Data Source:** Reads exclusively from a namespaced local browser storage key (`viva_history`). It is 100% isolated from the technical interview track data logs to prevent cross-track bleeding.
+*   **Displays:** Past Project Viva defense sessions only, organized by project title metadata tags, date markers, and final evaluation score badges.
+*   **Interaction:** Clicking an old item triggers a reload of the complete historic chat array into the center screen pane for review and study.
+
+### ⏺️ CENTER PANE — Active RAG Workspace (`VivaRAGWorkspace`)
+*   **Initial Empty State Layout:** Renders a clean minimalist file upload dropzone box.
+*   **Supported File Formats:** Ingests `.pdf`, `.docx`, and `.txt` file streams.
+*   **CRITICAL DATA QUALITY GUARDRAIL:** The upload parser checks the page bounds of the incoming file stream. If the project report document falls under 5 pages or exceeds 50 pages maximum, the pipeline immediately halts and drops a user-facing validation error.
+*   **Initial Automated Greeting:** The chat interface immediately injects the first examiner greeting as a chat bubble next to the dropzone:
+    > **"Hello and welcome to your Project Viva Simulator. Please upload your project report file below so we can initialize your defense environment."**
+*   **Ingestion State:** Displays a clean, linear, determinate loading progress bar as the text pipeline extracts content and generates structural RAG chunking parameters.
+*   **Active State:** Launches the conversational chat thread, rendering clean AI examiner text bubbles and student defense answers, anchored to a responsive bottom input text field.
+
+### ➡️ RIGHT PANE — Remediation & SDLC Cockpit (`VivaSDLCCockpit`)
+*   **SDLC Progress Map:** A clean visual stepper component tracking six core software engineering lifecycle phases:
+    1. Requirements Analysis
+    2. Architecture Design
+    3. Database Design
+    4. Implementation & Coding
+    5. Quality Assurance & Testing
+    6. Deployment & Maintenance
+*   **Dynamic Highlighting:** As the RAG engine moves question-by-question through the user's project report, the corresponding lifecycle node lights up (Teal → Gold) to show what area they are currently defending.
+*   **Real-Time Score Card:** Instantly calculates and flashes an answer score (e.g., `Score: 7/10`) after every submission.
+*   **Grading Rubric Benchmark ("The Right Answer"):** A static reference pane displaying the database-driven universal rubric baseline, enforcing our audited **27.7 words** average Project Viva grading rubric length.
+*   **AI Optimization Panel ("Better / Optimized Answer Script Box"):** A collapsible, high-contrast panel that prints improved technical phrases, missing architectural concepts, and optimized defense wordings if the student's grading scores drop below excellent marks.
+
+---
+
+## 💻 React Component Architecture Specifications (Week 4 Targets)
+To ensure our upcoming coding iterations map cleanly to our design files, all React sub-modules must follow this structural component mapping exactly:
+
+| Pane Position | Functional Role | React Component Name |
+| :--- | :--- | :--- |
+| **Left Sidebar Panel** | Session History Logs | `VivaHistorySidebar` |
+| **Center Screen Base** | File Ingest & Active Chat Feed | `VivaRAGWorkspace` |
+| **Right Sidebar Panel** | Lifecycle Mapping & Remediation | `VivaSDLCCockpit` |
+
+All panel states run on isolated component parameters, ensuring that jumping back and forth across the persistent Global Menu Bar never causes data leakage or breaks memory configurations.
+
+**[END OF PROJECT VIVA BLUEPRINT MANUAL — SIGN-OFF GRANTED]**
+
