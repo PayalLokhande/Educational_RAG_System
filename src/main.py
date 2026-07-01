@@ -18,14 +18,14 @@ def validate_student_request(prompt_text):
     Checks if the user text payload is valid, missing parameters, or blank.
     If invalid, must return a specific error flag or string.
     """
-    # === MEMBER 1 AI ASSISTANT START SLOT ===
+   # === MEMBER 1 AI ASSISTANT START SLOT ===
     if not prompt_text or prompt_text.strip() == "":
-    return {"status": "error", "error": "Prompt parameter required", "status_code": 400}
+        return {"status": "error", "error": "Prompt parameter required", "status_code": 400}
 
-if len(prompt_text) > 5000:
-    return {"status": "error", "error": "Prompt exceeds safe limit of 5000 characters", "status_code": 400}
+    if len(prompt_text) > 5000:
+        return {"status": "error", "error": "Prompt exceeds safe limit of 5000 characters", "status_code": 400}
 
-return {"status": "valid", "status_code": 200}
+    return {"status": "valid", "status_code": 200}
     # === MEMBER 1 AI ASSISTANT END SLOT ===
 
 
