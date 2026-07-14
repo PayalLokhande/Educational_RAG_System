@@ -1,32 +1,84 @@
 This folder contains raw and processed datasets.
 
-# 📊 Multi-Tier Data Warehouse Storage Engine
-* **Track Owners:** Siddhi Shelar (Technical Data), Manasvi Korde (Viva Data)
-* **Status:** LOCKED, STABLE, AND VERIFIED FOR PRODUCTION
+# 📁 Data Directory
 
-This directory serves as our unified, multi-tier data warehouse. It separates our raw inputs from production assets across 5 distinct, relative-pathed (`../`) folders to ensure zero data blending between our independent simulator modes.
+This folder contains all datasets, reference documents, and database files used by the **PrepMate – AI-Based Interview Preparation Platform**.
 
-## 📂 Storage Tier Architecture
+The data is organized into separate folders to ensure a clear distinction between source materials, processed data, and runtime storage used by the Technical Interview and Project Viva modules.
 
-### 1) Excel data files/
-* **Contents:** `raw_technical_interview.xlsx`, `raw_project_viva.xlsx`
-* **Purpose:** Raw, immutable data collection spreadsheets. Serves as the master root input for our cleaning pipeline scripts.
+## 📂 Folder Structure
 
-### 2) JSON data files/
-* **Contents:** `cleaned_technical_questions.json`, `cleaned_viva_questions.json`
-* **Purpose:** Production application arrays. Object-vector data structures loaded directly into memory by the backend application engine.
+### 📄 Excel Data Files
 
-### 3) PDF data Files/
-* **Contents:** Reference university syllabus sheets, coding blueprints, and project guidelines.
-* **Purpose:** Unstructured RAG grounding tier. All documents are strictly constrained within a fast-loading **5 to 50 pages maximum limit** to serve as vector-space references for LLM validation.
+**Purpose:** Stores raw datasets maintained in Microsoft Excel format.
 
-### 4) Database Load Files/
-* **Contents:** `technical_db_load.csv`, `viva_db_load.csv`
-* **Purpose:** Relational migration tier. Flattened, comma-separated table records optimized for bulk imports into relational schemas.
+**Contents:**
 
-### 5) SQLite Database Files/
-* **Contents:** `technical_questions.db`
-* **Purpose:** Indexed relational storage tier. Fully compiled, indexed relational database core ready for persistent, multi-threaded runtime queries.
+* Technical interview datasets
+* Project viva datasets
 
-***
-*Managed and Sign-off Secured by the Data Quality & Diversity Auditor.*
+These files serve as the primary source for preparing and updating question banks.
+
+---
+
+### 📑 JSON Data Files
+
+**Purpose:** Stores processed datasets in JSON format.
+
+**Contents:**
+
+* Technical interview questions
+* Project viva questions
+
+These files are loaded by the backend whenever structured question data is required.
+
+---
+
+### 📚 PDF Data Files
+
+**Purpose:** Stores reference documents used during development and testing.
+
+**Contents:**
+
+* Sample project reports
+* Reference study materials
+* Documentation and supporting resources
+
+Only dummy and publicly shareable documents are included.
+
+---
+
+### 📥 Database Load Files
+
+**Purpose:** Contains intermediate files used for importing or preparing data before database storage.
+
+**Contents:**
+
+* CSV files
+* Data import resources
+
+These files simplify the population of the application database.
+
+---
+
+### 🗄 SQLite Database Files
+
+**Purpose:** Stores persistent application data generated during runtime.
+
+**Contents:**
+
+* Technical interview sessions
+* Project viva sessions
+* Chat history
+* AI evaluations
+* Session metadata
+
+These databases enable the history feature by preserving conversations and evaluation records across application sessions.
+
+---
+
+## Notes
+
+* The project uses **SQLite** as the local database system.
+* All data included in this repository is **dummy data created exclusively for development, testing, and demonstration purposes**.
+* No personal information, confidential documents, or API credentials are stored in this directory.
