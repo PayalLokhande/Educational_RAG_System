@@ -1,30 +1,187 @@
-This folder contains source code for data preprocessing, training, and inference.
+# 💻 Source Code Directory
 
-# ⚙️ Source Code Frameworks & Production Ingestion Pipelines
-* **Task Allocation Strategy:** Dynamic Role Rotation Based on Weekly Track Comfort
-* **Current Lifecycle Phase:** Week 3 (Architectural Scaffolding & State Routing Core)
-* **Status:** CODE FRAMEWORKS FULLY VERIFIED WITH 0 RUNTIME ERRORS
+This folder contains the complete source code for **PrepMate – AI-Based Interview Preparation Platform**. It includes the frontend user interface, backend application logic, API integrations, database operations, and supporting resources required to run the application.
 
-This directory contains our automated data processing pipeline scripts, analytical configurations, and error-free frontend/backend code placeholders. Our group utilizes a flexible task ownership structure, allowing collectors, cleaners, and architects to rotate duties seamlessly between sprints.
+The project is organized into separate modules to improve maintainability, readability, and collaborative development.
 
-## 🗂️ Core File Manifest & Execution Map
+---
 
-### 💻 Frontend Architecture Scaffolding (`src/App.js`)
-* **Evolutionary Lifecycle:** 
-  - *Data Gathering Phase:* Conceptualized as separate UI screen sketches.
-  - *Design Blueprint Phase:* Written as a standard, error-free React.js component shell. 
-* **Current Core Functionality:** Implements our persistent Global Menu Bar and active state routing toggles (`currentScreen`). It houses independent structural 3-pane split layouts for the Technical and Project Viva track screens to prevent layout stacking or view clutter.
+# 📂 Folder Structure
 
-### 🐍 Backend API Scaffold Core (`src/main.py`)
-* **Evolutionary Lifecycle:** 
-  - *Data Gathering Phase:* Independent pipeline scripts only.
-  - *Design Blueprint Phase:* Built as a lightweight, pure Python 3 structural backend skeleton.
-* **Current Core Functionality:** Compiles with zero compilation warnings. It defines the exact execution logic and routes matching our RESTful spec table (`GET /health`, `POST /technical/chat`, `POST /viva/upload`, `POST /viva/chat`, and `GET /chat/history`) using built-in system parameters.
+## 🎨 css/
 
-### 📊 Base Data Processing & Analytics Core
-* **`data_cleaning.ipynb` (Pipeline Cleaner Role):** Automated Pandas pipeline. Runs `.str.strip()` whitespace elimination, `.dropna()` extraction, and `.drop_duplicates()` filtering to parse raw data layers into clean CSV/JSON arrays.
-* **`database_setup.py` (Storage Architect Role):** Database compiler mapping flat CSV structures into our persistent SQLite schema engine.
-* **`data_insights.ipynb` (Data Quality & Diversity Auditor Role):** Master analytics suite calculating cross-tabulation distribution matrices and tracking subject variety scales.
+**Purpose:** Contains all stylesheets used to design the application interface.
 
-***
-*Note: All directory bindings and imports utilize strict relative path routing variables (`../`) to guarantee 100% environment portability across developers' laptops.*
+**Contents:**
+
+* Common application styling
+* Technical Interview page styling
+* Project Viva page styling
+* Responsive layout and UI components
+
+These files provide a consistent and user-friendly experience across the application.
+
+---
+
+## 🖼 images/
+
+**Purpose:** Stores graphical assets used throughout the application.
+
+**Contents:**
+
+* Project logo
+* Upload illustrations
+* Icons and UI graphics
+
+---
+
+## ⚙ js/
+
+**Purpose:** Contains all client-side JavaScript modules.
+
+**Contents:**
+
+### app.js
+
+* Initializes the application
+* Loads required modules
+* Handles application startup
+
+### api.js
+
+* Communicates with the FastAPI backend
+* Sends chat requests
+* Uploads resume and project report files
+* Retrieves interview and viva history
+
+### chat.js
+
+* Manages chat conversations
+* Displays user and AI messages
+* Handles message rendering and live interactions
+
+### ui.js
+
+* Controls user interface behavior
+* Manages history panel
+* Updates evaluation panel
+* Handles dynamic UI rendering
+
+### upload.js
+
+* Implements drag-and-drop and file upload functionality
+* Validates uploaded files before submission
+
+### config.js
+
+* Stores frontend configuration values
+* Defines backend API endpoints
+
+---
+
+# 📄 HTML Files
+
+## index.html
+
+Application landing page providing navigation to:
+
+* Technical Interview Simulator
+* Project Viva Simulator
+
+---
+
+## technical.html
+
+User interface for the Technical Interview module.
+
+Features:
+
+* Resume upload
+* AI-powered interview chat
+* Interview history
+* Performance evaluation panel
+
+---
+
+## viva.html
+
+User interface for the Project Viva module.
+
+Features:
+
+* Project report upload
+* AI-driven viva session
+* Viva history
+* Evaluation and feedback panel
+
+---
+
+# 🐍 Backend Files
+
+## main.py
+
+The primary FastAPI application.
+
+Responsibilities include:
+
+* REST API implementation
+* AI request processing
+* Session management
+* History management
+* SQLite database operations
+* Resume and project report processing
+* Communication with the Gemini AI API
+
+---
+
+# 🧩 Application Features
+
+* AI-driven Technical Interview Simulation
+* AI-driven Project Viva Simulation
+* Resume Upload Support
+* Project Report Upload Support
+* Real-time AI Feedback
+* Performance Evaluation
+* Session History Management
+* Interactive Chat Interface
+* Separate Technical and Viva Workflows
+
+---
+
+# 🛠 Technologies Used
+
+### Frontend
+
+* HTML5
+* CSS3
+* JavaScript (ES6)
+
+### Backend
+
+* Python
+* FastAPI
+
+### Database
+
+* SQLite
+
+### AI Integration
+
+* Google Gemini API
+
+### Development Tools
+
+* Visual Studio Code
+* Git
+* GitHub
+* Postman
+* Thunder Client
+
+---
+
+# Notes
+
+* The frontend communicates with the backend through REST APIs.
+* Technical Interview and Project Viva modules maintain separate histories.
+* The application stores conversation history and evaluations using SQLite.
+* All data included in this project is intended solely for development, testing, and demonstration purposes.
