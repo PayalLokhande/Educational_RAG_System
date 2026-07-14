@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>PrepMate | Project Viva</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="css/viva.css">
+
+    <link rel="stylesheet">
+
+</head>
+
+<body class="viva-page">
+
+<!-- ======================================================
+                    NAVIGATION BAR
+======================================================= -->
+
+<header class="dashboard-navbar">
+
+    <div class="brand">
+
+        <img src="../images/Prepmate_logo.png"
+             alt="PrepMate Logo"
+             class="logo">
+
+        <h1>PrepMate</h1>
+
+    </div>
+
+    <div class="page-title">
+
+        <span>Project Viva Simulator</span>
+
+    </div>
+
+    <nav>
+
+        <ul>
+
+            <li>
+
+                <a href="index.html">
+
+                    Home
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="technical.html">
+
+                    Technical
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a class="active"
+                   href="viva.html">
+
+                    Project Viva
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ======================================================
+                    MAIN DASHBOARD
+======================================================= -->
+
+<main class="viva-dashboard">
+
+
+<aside id="historyPanel">
+
+    <div class="panel-heading">
+
+        <h2>
+
+            Session History
+
+        </h2>
+
+    </div>
+
+    <div id="historyContainer">
+
+    <!--
+        Viva history cards will be rendered here dynamically by JavaScript.
+    -->
+
+</div>
+
+</aside>
+
+
+<section id="chatWorkspace">
+
+    <div class="workspace-header">
+
+        <h2>
+
+            Project Viva
+
+        </h2>
+
+        <p>
+
+            Upload your Project Report to begin the AI viva session.
+
+        </p>
+
+    </div>
+
+
+
+   
+        <!-- ======================================================
+                    CHAT CONTAINER
+    ======================================================= -->
+
+    <section id="chatContainer">
+
+        <!-- Initial AI Welcome Message -->
+
+        <div class="message ai-message">
+
+            <div class="avatar">
+
+                AI
+
+            </div>
+
+            <div class="message-content">
+
+                <h4>PrepMate AI</h4>
+
+                <p>Welcome to the Project Viva Simulator.
+Please upload your Project Report to begin your personalized viva session.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================================================
+
+            Dynamic chat messages will appear here.
+
+        =================================================== -->
+
+        <div id="chatMessages">
+
+            <!--
+
+                JavaScript will dynamically insert
+
+                <div class="message user-message"></div>
+
+                <div class="message ai-message"></div>
+
+            -->
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+                    AI TYPING INDICATOR
+    ======================================================= -->
+
+    <div id="typingIndicator" class="hidden">
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+    </div>
+
+
+
+    <!-- ======================================================
+                    CHAT INPUT
+    ======================================================= -->
+
+    <section id="inputSection">
+
+        <textarea
+
+            id="messageInput"
+
+            rows="2"
+
+            placeholder="Answer the viva question..."></textarea>
+
+
+
+        <!--
+
+            Hidden until user types.
+
+        -->
+
+        <button id="sendButton">
+
+            Send
+
+        </button>
+
+    </section>
+
+</section>
+
+
+
+<!-- ======================================================
+                    RIGHT PANEL
+======================================================= -->
+
+<aside id="evaluationPanel">
+
+     <!-- Upload Card -->
+
+    <section id="uploadCard">
+
+        <h3>
+
+            Upload Project Report
+
+        </h3>
+
+        <p>
+
+            Supported Formats: PDF • DOCX • TXT
+
+        </p>
+
+        <div class="upload-actions">
+
+            <input
+                type="file"
+                id="reportUpload"
+                accept=".pdf,.docx,.txt">
+
+            <button id="uploadButton">
+
+                Upload Report
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <div class="panel-heading">
+
+        <h2>
+
+            AI Evaluation
+
+        </h2>
+
+    </div>
+
+
+
+    <!-- Overall Score -->
+
+    <div class="evaluation-card">
+
+        <h3>
+
+            Overall Score
+
+        </h3>
+
+        <div id="overallScore">
+
+            --
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Strengths -->
+
+    <div class="evaluation-card">
+
+        <h3>
+
+            Strengths
+
+        </h3>
+
+        <ul id="strengthList">
+
+            <li>
+
+                Waiting for viva...
+
+            </li>
+
+        </ul>
+
+    </div>
+
+
+
+    <!-- Improvements -->
+
+    <div class="evaluation-card">
+
+        <h3>
+
+            Areas to Improve
+
+        </h3>
+
+        <ul id="improvementList">
+
+            <li>
+
+                Waiting for viva...
+
+            </li>
+
+        </ul>
+
+    </div>
+
+
+
+    <!-- Recommendation -->
+
+    <div class="evaluation-card">
+
+        <h3>
+
+            AI Recommendation
+
+        </h3>
+
+        <p id="recommendation">
+
+            Complete your viva session to receive AI recommendations.
+
+        </p>
+
+    </div>
+
+</aside>
+
+</main>
+
+
+
+<!-- ======================================================
+
+                    JAVASCRIPT
+
+======================================================= -->
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/chat.js"></script>
+<script src="js/upload.js"></script>
+<script src="js/app.js"></script>
+</body>
+
+</html>
