@@ -1,0 +1,643 @@
+/*============================================================
+
+                    PREPMATE
+            AI Interview Preparation Platform
+
+    File : style.css
+
+=============================================================*/
+
+
+/*==============================
+        GOOGLE FONT RESET
+==============================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#F4F7FC;
+
+    color:#1F2937;
+
+    overflow-x:hidden;
+
+}
+
+
+
+/*==============================
+        COLOR VARIABLES
+==============================*/
+
+:root{
+
+    --technical:#4361EE;
+
+    --viva:#00A896;
+
+    --dark:#1F2937;
+
+    --gray:#6B7280;
+
+    --light:#F4F7FC;
+
+    --white:#FFFFFF;
+
+    --shadow:0 12px 35px rgba(0,0,0,.08);
+
+    --radius:18px;
+
+}
+
+
+
+/*==============================
+        NAVIGATION BAR
+==============================*/
+
+.navbar{
+
+    width:100%;
+
+    height:85px;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 70px;
+
+    box-shadow:var(--shadow);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+}
+
+
+
+/*==============================
+        BRAND
+==============================*/
+
+.brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+
+.logo{
+
+    width:80px;
+
+    height:80px;
+
+    object-fit:contain;
+
+}
+
+
+
+.brand h1{
+
+    font-size:2rem;
+
+    color:var(--technical);
+
+    font-weight:700;
+
+}
+
+
+
+/*==============================
+        NAV LINKS
+==============================*/
+
+nav ul{
+
+    display:flex;
+
+    gap:35px;
+
+    list-style:none;
+
+}
+
+
+
+nav a{
+
+    text-decoration:none;
+
+    color:var(--dark);
+
+    font-size:16px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+
+
+nav a:hover{
+
+    color:var(--technical);
+
+}
+
+
+
+.active{
+
+    color:var(--technical);
+
+    font-weight:600;
+
+}
+
+
+
+/*==============================
+        HERO SECTION
+==============================*/
+
+.hero{
+
+    min-height:calc(100vh - 85px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+
+
+/*==============================
+        MAIN CONTENT
+==============================*/
+
+.hero-content{
+
+    width:100%;
+
+    max-width:1200px;
+
+    text-align:center;
+
+}
+
+
+
+/*==============================
+        TITLE ROW
+==============================*/
+
+.title-row{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.hero-logo{
+
+    width:95px;
+
+    height:95px;
+
+    object-fit:contain;
+
+}
+
+
+
+.title-row h2{
+
+    font-size:4rem;
+
+    color:var(--technical);
+
+    font-weight:700;
+
+}
+
+
+
+/*==============================
+        DESCRIPTION
+==============================*/
+
+.description{
+
+    font-size:1.4rem;
+
+    color:var(--dark);
+
+    margin-top:10px;
+
+}
+
+
+
+.tagline{
+
+    margin-top:15px;
+
+    color:var(--gray);
+
+    font-size:1rem;
+
+    margin-bottom:60px;
+
+}
+/*============================================================
+
+                    MODE SELECTION
+=============================================================*/
+
+.mode-selection{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:stretch;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+/*============================================================
+
+                    MODE CARD
+=============================================================*/
+
+.mode-card{
+
+    background:var(--white);
+
+    width:360px;
+
+    min-height:420px;
+
+    border-radius:25px;
+
+    padding:40px 30px;
+
+    box-shadow:var(--shadow);
+
+    transition:0.35s ease;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    cursor:pointer;
+
+    border:2px solid transparent;
+
+}
+
+
+
+.mode-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 45px rgba(0,0,0,.15);
+
+}
+
+
+
+/*============================================================
+
+                    ICON
+=============================================================*/
+
+.mode-icon{
+
+    width:100px;
+
+    height:100px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:50px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* Technical */
+
+.technical-card .mode-icon{
+
+    background:rgba(67,97,238,.12);
+
+    color:var(--technical);
+
+}
+
+
+
+/* Viva */
+
+.viva-card .mode-icon{
+
+    background:rgba(0,168,150,.12);
+
+    color:var(--viva);
+
+}
+
+
+
+/*============================================================
+
+                    CARD TITLE
+=============================================================*/
+
+.mode-card h3{
+
+    font-size:1.7rem;
+
+    margin-bottom:18px;
+
+    color:var(--dark);
+
+    text-align:center;
+
+}
+
+
+
+/*============================================================
+
+                    CARD DESCRIPTION
+=============================================================*/
+
+.mode-card p{
+
+    color:var(--gray);
+
+    text-align:center;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+
+
+/*============================================================
+
+                    BUTTONS
+=============================================================*/
+
+.mode-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    color:white;
+
+    text-decoration:none;
+
+    text-align:center;
+
+    font-weight:600;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+
+
+/* Technical Button */
+
+.technical-btn{
+
+    background:var(--technical);
+
+}
+
+
+
+.technical-btn:hover{
+
+    background:#3550d8;
+
+}
+
+
+
+/* Viva Button */
+
+.viva-btn{
+
+    background:var(--viva);
+
+}
+
+
+
+.viva-btn:hover{
+
+    background:#008d7d;
+
+}
+
+
+
+/*============================================================
+
+                CARD BORDER EFFECT
+=============================================================*/
+
+.technical-card:hover{
+
+    border-color:var(--technical);
+
+}
+
+
+
+.viva-card:hover{
+
+    border-color:var(--viva);
+
+}
+
+
+
+/*============================================================
+
+                    FOOTER
+=============================================================*/
+
+footer{
+
+    margin-top:80px;
+
+    padding:25px;
+
+    text-align:center;
+
+    color:var(--gray);
+
+    font-size:15px;
+
+}
+
+
+
+/*============================================================
+
+                SIMPLE FADE ANIMATION
+=============================================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+.hero-content{
+
+    animation:fadeUp 1s ease;
+
+}
+
+
+
+/*============================================================
+
+                SELECTION COLOR
+=============================================================*/
+
+::selection{
+
+    background:var(--technical);
+
+    color:white;
+
+}
+
+
+
+/*============================================================
+
+                CUSTOM SCROLLBAR
+=============================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+
+
+::-webkit-scrollbar-track{
+
+    background:#ECECEC;
+
+}
+
+
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--technical);
+
+    border-radius:20px;
+
+}
+
+
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#3550d8;
+
+}
