@@ -1,31 +1,130 @@
-This folder contains weekly reports, metrics, and final documentation.
+# 🛡️ Reports, Architecture & Project Documentation
 
-# 🛡️ Quality Assurance, Architecture Blueprints & Audit Documentation
-* **Task Allocation Strategy:** Dynamic Role Rotation Based on Weekly Track Comfort
-* **Current Lifecycle Phase:** Week 3 (Integrated Application Blueprint Sign-Off)
-* **Status:** AUDITS SECURED AND MASTER SPRINT SIGNED
+**Project:** PrepMate – AI Interview & Project Viva Simulator  
+**Project Type:** AI-Based Educational RAG System (RAG)  
+**Status:** Final Project Documentation Completed
 
-This directory serves as our central governance archive. It hosts our metadata schemas, historical data cleansing audits, and the text-based layout specifications required for our full-stack system blueprints.
+This directory serves as the central documentation repository for the PrepMate project. It contains the system design documents, architecture blueprints, API specifications, data preparation reports, testing reports, and supporting diagrams developed throughout the project lifecycle.
 
-## 📄 Core Documentation Manifest
+---
 
-### 📐 1. `INTERFACE_BLUEPRINT.md` (Frontend Layout Designers)
-* **Purpose:** Defines our interactive frontend UI/UX architecture.
-* **Key Specifications:** Houses our official text-based **Visual System Architecture Diagram**. It documents our uniform 3-pane layout framework (Left History Panel, Center Chat Canvas, Right Remediation Cockpit), persistent navigation routes, and track-specific visual styling rules (Technical Navy Blue vs. Project Viva Teal).
+# 📄 Documentation Manifest
 
-### 🏃‍♂️ 2. `SEQUENCE_FLOWS.md` (Core Systems & Data Pipeline Engineer)
-* **Purpose:** Maps behind-the-scenes data transaction flows over time.
-* **Key Specifications:** Charts 3 distinct logic timelines: Track A Resume Ingestion, Track B RAG Extraction, and the History Archival loop. Critically details our strict **5 to 50 pages quality guardrail validation gate** that halts execution and drops an automatic `400 Bad Request` payload if file boundaries are violated.
+### 📐 1. `INTERFACE_BLUEPRINT.md`
+**Purpose:** Defines the frontend UI/UX architecture of PrepMate.
 
-### 🔌 3. `API_SPECIFICATION.md` (Full-Stack Solution Architect & Database Admin)
-* **Purpose:** Outlines network communication contracts and historical log schemas.
-* **Key Specifications:** Provides an explicit RESTful mapping routing table detailing GET and POST request/response payloads. Documents our relational SQLite history database tracking schema, hardcoding the `track_type` string divider column to ensure the frontend sidebars instantly filter logs without cross-track data bleeding.
+**Key Specifications:**
+- Three-panel application layout
+- History Panel
+- Chat Interface
+- Evaluation Panel
+- Technical and Viva theme specifications
+- User interaction workflow
 
-### 🔬 4. `cleaning_report.md` (Data Quality & Diversity Auditor)
-* **Purpose:** The master data phase audit report logging our data-cleansing history across sprint lifecycles.
-* **Key Specifications:** Details our historical corrections (Viva rubric duplicate solutions and the technical topic skew mitigation). Tracks our final evolved metrics:
-  - **Technical Track:** 90 total records, balanced difficulty (30 Easy, 30 Medium, 30 Hard), 6 core engineering pillars, a **14.2 words** average rubric text baseline, and the new Behavioral `B001` entry pitch row.
-  - **Project Viva Track:** 50 total records, uniform difficulty (17 Easy, 17 Medium, 16 Hard), spanning the full software lifecycle matrix, and a **27.7 words** average rubric text baseline.
+---
 
-***
-*All reports contained within this directory are cooperatively verified, audited, and locked for production binding.*
+### 🏃 2. `SEQUENCE_FLOWS.md`
+**Purpose:** Describes the complete execution flow of the application.
+
+**Key Specifications:**
+- Resume upload workflow
+- Project report upload workflow
+- RAG processing pipeline
+- AI response generation
+- Evaluation workflow
+- Session history management
+- Error handling sequence
+
+---
+
+### 🔌 3. `API_SPECIFICATION.md`
+**Purpose:** Documents all backend REST APIs.
+
+**Includes:**
+- API endpoints
+- Request & response formats
+- HTTP methods
+- Status codes
+- Database interaction
+- Session management APIs
+
+---
+
+### 🔬 4. `cleaning_report.md`
+**Purpose:** Documents the preparation and validation of the datasets used in the project.
+
+**Includes:**
+- Dataset cleaning process
+- Duplicate removal
+- Difficulty balancing
+- Technical interview dataset statistics
+- Project viva dataset statistics
+- Final dataset summary
+
+---
+
+### 🧪 5. `API_Testing_Report.pdf`
+**Purpose:** Presents the testing results of all backend APIs.
+
+**Includes:**
+- Technical Interview API testing
+- Project Viva API testing
+- Upload API testing
+- Response validation
+- Error handling
+- Postman execution results
+
+---
+
+### 🏗️ 6. `System_Architecture.png`
+**Purpose:** Visual representation of the overall system architecture.
+
+**Illustrates:**
+- Frontend
+- FastAPI Backend
+- Google Gemini API
+- RAG Pipeline
+- SQLite Database
+- Deployment Architecture
+
+---
+
+### 🔄 7. `Sequence_Diagram.png`
+**Purpose:** Visual sequence diagram illustrating system interactions.
+
+**Illustrates:**
+- User interactions
+- Resume/Report upload
+- AI processing
+- Question generation
+- Response evaluation
+- Database operations
+- Session history retrieval
+
+---
+
+# 📌 Project Summary
+
+PrepMate is an AI-powered educational platform that leverages a **Retrieval-Augmented Generation (RAG)** approach to help students prepare for technical interviews and project viva examinations.
+
+The application allows users to upload resumes or project reports, generates personalized AI-based questions, evaluates responses with detailed feedback, assigns performance scores, and stores previous sessions for future review.
+
+---
+
+## 📚 Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- FastAPI
+- Python
+- Google Gemini API
+- SQLite
+- Retrieval-Augmented Generation (RAG)
+- Render
+- Cloudflare Pages
+
+---
+
+**Prepared by:** Group 100  
+**Internship Project – AI-Based Educational RAG System**
