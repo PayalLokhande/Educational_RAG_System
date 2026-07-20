@@ -1,187 +1,164 @@
-# 💻 Source Code Directory
+# ⚙️ Source Code Frameworks & Production Ingestion Pipelines
 
-This folder contains the complete source code for **PrepMate – AI-Based Interview Preparation Platform**. It includes the frontend user interface, backend application logic, API integrations, database operations, and supporting resources required to run the application.
+* **Task Allocation Strategy:** Dynamic Role Rotation Based on Weekly Track Comfort
+* **Current Lifecycle Phase:** Final Integrated AI-Based Educational RAG System
+* **Status:** FULL-STACK APPLICATION IMPLEMENTED, TESTED & DEPLOYED
 
-The project is organized into separate modules to improve maintainability, readability, and collaborative development.
+This directory contains the complete source code of the **PrepMate – AI Interview & Project Viva Simulator**. It includes the frontend, backend, AI integration, data processing modules, and database utilities that collectively power the Retrieval-Augmented Generation (RAG) based educational platform.
 
----
-
-# 📂 Folder Structure
-
-## 🎨 css/
-
-**Purpose:** Contains all stylesheets used to design the application interface.
-
-**Contents:**
-
-* Common application styling
-* Technical Interview page styling
-* Project Viva page styling
-* Responsive layout and UI components
-
-These files provide a consistent and user-friendly experience across the application.
+Our development approach followed a collaborative task allocation strategy, allowing team members to contribute across frontend development, backend APIs, AI integration, database management, testing, and deployment.
 
 ---
 
-## 🖼 images/
+# 🗂️ Core File Manifest & Execution Map
 
-**Purpose:** Stores graphical assets used throughout the application.
+## 🐍 Backend API Core (`src/main.py`)
 
-**Contents:**
+### Evolutionary Lifecycle
+- **Data Gathering Phase:** Independent preprocessing and data pipeline scripts.
+- **Design Blueprint Phase:** RESTful FastAPI backend architecture.
+- **Final Implementation:** Complete AI-powered backend supporting Technical Interview and Project Viva modules.
 
-* Project logo
-* Upload illustrations
-* Icons and UI graphics
+### Current Core Functionality
+Implements the complete backend workflow including:
 
----
+- FastAPI REST API endpoints
+- Resume upload handling
+- Project report upload handling
+- RAG-based document retrieval
+- Google Gemini API integration
+- AI-powered question generation
+- Response evaluation
+- Session history management
+- SQLite database interaction
+- Error handling and validation
 
-## ⚙ js/
+Supported endpoints include:
 
-**Purpose:** Contains all client-side JavaScript modules.
-
-**Contents:**
-
-### app.js
-
-* Initializes the application
-* Loads required modules
-* Handles application startup
-
-### api.js
-
-* Communicates with the FastAPI backend
-* Sends chat requests
-* Uploads resume and project report files
-* Retrieves interview and viva history
-
-### chat.js
-
-* Manages chat conversations
-* Displays user and AI messages
-* Handles message rendering and live interactions
-
-### ui.js
-
-* Controls user interface behavior
-* Manages history panel
-* Updates evaluation panel
-* Handles dynamic UI rendering
-
-### upload.js
-
-* Implements drag-and-drop and file upload functionality
-* Validates uploaded files before submission
-
-### config.js
-
-* Stores frontend configuration values
-* Defines backend API endpoints
+- `GET /history/messages`
+- `POST /technical/upload`
+- `POST /technical/chat`
+- `POST /viva/upload`
+- `POST /viva/chat`
+- `GET /history/sessions`
+- `GET /history/chat`
 
 ---
 
-# 📄 HTML Files
+## 🌐 Frontend Application
 
-## index.html
+The frontend is developed using **HTML, CSS, and JavaScript**, providing an interactive and responsive user experience.
 
-Application landing page providing navigation to:
+### Core Components
 
-* Technical Interview Simulator
-* Project Viva Simulator
-
----
-
-## technical.html
-
-User interface for the Technical Interview module.
-
-Features:
-
-* Resume upload
-* AI-powered interview chat
-* Interview history
-* Performance evaluation panel
+- Home Page
+- Technical Interview Interface
+- Project Viva Interface
+- Resume Upload
+- Report Upload
+- Dynamic Evaluation Panel
+- Session History Panel
+- Responsive Layout
+- Theme-specific UI (Technical & Viva)
 
 ---
 
-## viva.html
+## 🤖 AI & RAG Processing
 
-User interface for the Project Viva module.
+PrepMate leverages a **Retrieval-Augmented Generation (RAG)** pipeline to personalize interview and viva experiences.
 
-Features:
+### Features
 
-* Project report upload
-* AI-driven viva session
-* Viva history
-* Evaluation and feedback panel
+- Resume-based Technical Interview generation
+- Project Report-based Viva generation
+- Context-aware AI questioning
+- AI response evaluation
+- Performance scoring
+- Strength and improvement suggestions
+- Personalized feedback generation
 
 ---
 
-# 🐍 Backend Files
+## 🗄️ Database Management
 
-## main.py
+SQLite databases are used for persistent session storage.
 
-The primary FastAPI application.
+### Databases
+
+- `technical_questions.db`
+- `viva_questions.db`
+
+These databases maintain:
+
+- Chat history
+- Session information
+- AI evaluations
+- Track-specific conversation records
+
+---
+
+## 📊 Data Processing & Analytics
+
+### `data_cleaning.ipynb`
+**Purpose:** Cleans and preprocesses raw datasets.
+
+Functions include:
+
+- Whitespace removal
+- Missing value handling
+- Duplicate removal
+- Dataset normalization
+
+---
+
+### `database_setup.py`
+**Purpose:** Initializes and configures SQLite databases.
 
 Responsibilities include:
 
-* REST API implementation
-* AI request processing
-* Session management
-* History management
-* SQLite database operations
-* Resume and project report processing
-* Communication with the Gemini AI API
+- Database creation
+- Table generation
+- Data insertion
+- Schema management
 
 ---
 
-# 🧩 Application Features
+### `data_insights.ipynb`
+**Purpose:** Performs dataset analysis and validation.
 
-* AI-driven Technical Interview Simulation
-* AI-driven Project Viva Simulation
-* Resume Upload Support
-* Project Report Upload Support
-* Real-time AI Feedback
-* Performance Evaluation
-* Session History Management
-* Interactive Chat Interface
-* Separate Technical and Viva Workflows
+Includes:
+
+- Difficulty distribution
+- Topic diversity analysis
+- Dataset statistics
+- Quality verification
 
 ---
 
-# 🛠 Technologies Used
+## 🔒 Code Quality
 
-### Frontend
+The source code follows:
 
-* HTML5
-* CSS3
-* JavaScript (ES6)
-
-### Backend
-
-* Python
-* FastAPI
-
-### Database
-
-* SQLite
-
-### AI Integration
-
-* Google Gemini API
-
-### Development Tools
-
-* Visual Studio Code
-* Git
-* GitHub
-* Postman
-* Thunder Client
+- Modular architecture
+- Relative path management
+- RESTful API design
+- Separation of frontend and backend logic
+- Error handling and validation
+- Maintainable folder structure
 
 ---
 
-# Notes
+## 🚀 Deployment Compatibility
 
-* The frontend communicates with the backend through REST APIs.
-* Technical Interview and Project Viva modules maintain separate histories.
-* The application stores conversation history and evaluations using SQLite.
-* All data included in this project is intended solely for development, testing, and demonstration purposes.
+The application has been successfully deployed using:
+
+- **Backend:** Render
+- **Frontend:** Cloudflare Pages
+
+The project structure utilizes relative path routing (`../`) to ensure portability across development and deployment environments.
+
+---
+
+**Project:** PrepMate – AI Interview & Project Viva Simulator
+
+**Internship Project – AI-Based Educational RAG System**
